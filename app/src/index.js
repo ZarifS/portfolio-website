@@ -1,11 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import Routes from './routes'
+require('./sass/main.scss');
 
-const Index = () => {
-    return <div >
-        Hello React!
-    </div>;
-};
+class Site extends React.Component {
+    render() {
+        return (
+            <Routes />
+        );
+    }
+}
 
 ReactDOM.render(
-    <Index/>, document.getElementById("header"));
+    <Site/>, document.getElementById("root"));
