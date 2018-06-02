@@ -1,8 +1,29 @@
-/* 
-    All of the styles in the app are written in SaaS. They are put into bundle.min.js using webpack.
-    To add a new scss file, you must add it to the entry line in the webpack.config.js file.
-*/
-$color: #2cc552;
-h2 {
-    color: $color;
+// @import './_reset.scss';
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.app {
+    height: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: auto;
+}
+
+.content-area {
+    height: 100vh;
+    background-color: red;
+    @media screen and (min-width: 992px) {
+        width: 80vw;
+    }
+    @media screen and (max-width: 991px) {
+        width: 100vw;
+    }
 }

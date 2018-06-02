@@ -1,6 +1,7 @@
 import React from 'react'
 import {BrowserRouter, Route, Link} from 'react-router-dom'
 import SidePanel from './sidePanel'
+import Hamburger from './hamburger'
 import Responsive from 'react-responsive'
 
 const Desktop = props => <Responsive {...props} minWidth={992}/>
@@ -58,18 +59,18 @@ class App extends React.Component {
     render() {
         return (
             <BrowserRouter>
-                <div>
-                    <div className='contentArea'>
+                <div className='app'>
+                    <div className='content-area'>
                         <Route exact path="/" component={Home}/>
                         <Route path="/about" component={About}/>
                         <Route path="/topics" component={MyStory}/>
                     </div>
-                    <div className='navigationArea'>
-                        <Desktop>
-                            < SidePanel/>
-                        </Desktop>
-                        <Tablet>Hamburger!</Tablet>
-                    </div>
+                    <Desktop>
+                        < SidePanel/>
+                    </Desktop>
+                    <Tablet>
+                        <Hamburger/>
+                    </Tablet>
                 </div>
             </BrowserRouter>
         )

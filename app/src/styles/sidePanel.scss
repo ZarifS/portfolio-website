@@ -1,0 +1,16 @@
+@import './_variables';
+.side-panel-container {
+    width: 20%;
+    height: 100vh;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-animation: fadein 2s;
+    animation: fadein 2s;
+    background-color: $side-panel-bg;
+}
