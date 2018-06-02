@@ -1,11 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
-const Index = () => {
-    return <div >
-        Hello React!
-    </div>;
-};
+import App from './components/app'
+require('./styles/app.scss');
 
 ReactDOM.render(
-    <Index/>, document.getElementById("header"));
+    <App/>, document.getElementById("header"));
