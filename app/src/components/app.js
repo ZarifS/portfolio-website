@@ -3,6 +3,7 @@ import {BrowserRouter, Route, Link} from 'react-router-dom'
 import SidePanel from './sidePanel'
 import Hamburger from './hamburger'
 import Responsive from 'react-responsive'
+import Drawer from '@material-ui/core/SwipeableDrawer'
 
 const Desktop = props => <Responsive {...props} minWidth={992}/>
 const Tablet = props => <Responsive {...props} maxWidth={991}/>
@@ -56,6 +57,18 @@ const MyStory = ({match}) => (
 )
 
 class App extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            menuOpen: false
+        }
+        this.openDrawer = this
+            .openDrawer
+            .bind(this)
+    }
+    openDrawer() {
+        this.setState({menuOpen: true})
+    }
     render() {
         return (
             <BrowserRouter>
@@ -69,7 +82,17 @@ class App extends React.Component {
                         < SidePanel/>
                     </Desktop>
                     <Tablet>
-                        <Hamburger/>
+                        <Hamburger
+                            openDrawer={this
+                            .openDrawer
+                            .bind(this)}/>
+                        <Drawer
+                            open={this.state.menuOpen}
+                            onClose={() => this.setState({menuOpen: false})}
+                            onOpen={() => this.setState({menuOpen: true})}
+                            anchor="right">
+                            <SidePanel closerMenu={() => this.setState({menuOpen: false})}/>
+                        </Drawer>
                     </Tablet>
                 </div>
             </BrowserRouter>

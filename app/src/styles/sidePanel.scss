@@ -1,6 +1,7 @@
 @import './_variables';
 .side-panel-container {
-    width: 20%;
+    width: 20vw;
+    min-width: 250px;
     height: 100vh;
     display: -ms-flexbox;
     display: flex;
@@ -13,4 +14,32 @@
     -webkit-animation: fadein 2s;
     animation: fadein 2s;
     background-color: $side-panel-bg;
+    .header-navigation {
+        display: flex;
+        justify-content: space-evenly;
+        position: fixed;
+        top: 0;
+        width: 20vw;
+        min-width: 250px;
+        .nav-item {
+            height: 45px;
+            flex: 1 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .home {
+            background-color: #8549c8;
+        }
+        .linkedIn {
+            background-color: #3399ff;
+        }
+        .github {
+            background-color: #bd2033;
+        }
+        .resume {
+            background-color: #e6831c;
+        }
+    }
 }

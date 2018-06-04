@@ -1,5 +1,5 @@
 import React from 'react';
-import MenuIcon from '@material-ui/icons/Menu';
+import FA from 'react-fontawesome'
 import IconButton from '@material-ui/core/IconButton';
 
 export default class Hamburger extends React.Component {
@@ -8,6 +8,11 @@ export default class Hamburger extends React.Component {
         this.state = {}
     }
     render() {
+        const menuStyle = {
+            color: 'white',
+            fontSize: '.8em',
+            textShadow: '1px 1px 1px #454545'
+        };
         return (
             <div
                 style={{
@@ -21,11 +26,13 @@ export default class Hamburger extends React.Component {
                     style={{
                     'marginLeft': '5px',
                     'marginTop': '5px'
+                }}
+                    onClick={() => {
+                    this
+                        .props
+                        .openDrawer()
                 }}>
-                    <MenuIcon
-                        style={{
-                        'fontSize': '25px'
-                    }}/>
+                    <FA name='bars' style={menuStyle}/>
                 </IconButton>
             </div>
         )
