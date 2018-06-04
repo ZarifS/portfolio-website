@@ -1,7 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import IconButton from '@material-ui/core/IconButton'
-import HomeIcon from '@material-ui/icons/Home'
 import FA from 'react-fontawesome'
 require('../styles/sidePanel.scss')
 
@@ -39,7 +38,12 @@ export default class SidePanel extends React.Component {
                         </Link>
                     </div>
                 </div>
-                <div className='content-navigation'></div>
+                <div className='content-navigation'>
+                    <div className='navItem'><h2>My Story</h2></div>
+                    <div className='navItem'><h2>Works</h2></div>
+                    <div className='navItem'><h2>Blog</h2></div>
+                    <div className='navItem'><h2>Services</h2></div>
+                </div>
             </div>
         )
     }
