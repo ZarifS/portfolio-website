@@ -10,7 +10,7 @@ const Tablet = props => <Responsive {...props} maxWidth={991}/>
 
 const Home = () => (
     <div>
-        <h2>Home</h2>
+        <h2 className='titleHeader'>Zarif Shahriar</h2>
     </div>
 )
 const About = () => (
