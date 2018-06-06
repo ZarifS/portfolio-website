@@ -1,7 +1,7 @@
 import React from 'react'
 import {BrowserRouter, Route, Link} from 'react-router-dom'
 import SidePanel from './sidePanel'
-import Hamburger from './hamburger'
+import MenuIcon from './menuIcon'
 import Responsive from 'react-responsive'
 import Drawer from '@material-ui/core/SwipeableDrawer'
 import "../styles/app.scss"
@@ -83,7 +83,7 @@ class App extends React.Component {
                         < SidePanel/>
                     </Desktop>
                     <Tablet>
-                        <Hamburger
+                        <MenuIcon
                             openDrawer={this
                             .openDrawer
                             .bind(this)}/>

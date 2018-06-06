@@ -7,6 +7,10 @@
     color: white;
 }
 
+p {
+    @include text;
+}
+
 .app {
     height: 100%;
     display: -ms-flexbox;

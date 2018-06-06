@@ -1,27 +1,16 @@
 import React from 'react';
 import FA from 'react-fontawesome'
 import IconButton from '@material-ui/core/IconButton';
+import '../styles/menuIcon.scss'
 
-export default class Hamburger extends React.Component {
+export default class MenuIcon extends React.Component {
     constructor(props) {
         super(props)
         this.state = {}
     }
     render() {
-        const menuStyle = {
-            color: 'white',
-            fontSize: '.8em',
-            textShadow: '1px 1px 1px #454545'
-        };
         return (
-            <div
-                style={{
-                'height': '60px',
-                'position': 'fixed',
-                'zIndex': '1',
-                'top': '0',
-                'right': '0'
-            }}>
+            <div className='menu'>
                 <IconButton
                     style={{
                     'marginLeft': '5px',
@@ -32,7 +21,7 @@ export default class Hamburger extends React.Component {
                         .props
                         .openDrawer()
                 }}>
-                    <FA name='bars' style={menuStyle}/>
+                    <FA name='bars' className='menuIcon'/>
                 </IconButton>
             </div>
         )

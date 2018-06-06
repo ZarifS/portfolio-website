@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import IconButton from '@material-ui/core/IconButton'
 import FA from 'react-fontawesome'
-require('../styles/sidePanel.scss')
+import "../styles/sidePanel.scss"
 
 export default class SidePanel extends React.Component {
     constructor(props) {
