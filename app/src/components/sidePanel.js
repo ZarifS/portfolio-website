@@ -23,7 +23,7 @@ export default class SidePanel extends React.Component {
                         </Link>
                     </div>
                     <div className='linkedIn nav-item'>
-                        <Link to='/about'>
+                        <Link to='/story'>
                             <FA name='linkedin' style={iconStyle}/>
                         </Link>
                     </div>
@@ -40,7 +40,7 @@ export default class SidePanel extends React.Component {
                 </div>
                 <div className='content-navigation'>
                     <div className='nav-item'>
-                        <Link to='/about'>
+                        <Link to='/story'>
                             My Story
                         </Link>
                     </div>
