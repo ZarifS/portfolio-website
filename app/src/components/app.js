@@ -4,6 +4,7 @@ import SidePanel from './sidePanel'
 import Hamburger from './hamburger'
 import Responsive from 'react-responsive'
 import Drawer from '@material-ui/core/SwipeableDrawer'
+import "../styles/app.scss"
 
 const Desktop = props => <Responsive {...props} minWidth={992}/>
 const Tablet = props => <Responsive {...props} maxWidth={991}/>

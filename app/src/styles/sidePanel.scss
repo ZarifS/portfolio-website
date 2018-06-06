@@ -1,8 +1,16 @@
 @import './_variables';
+
+@mixin headerResponsive {
+    @include text;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+}
 .side-panel-container {
     width: 20vw;
     min-width: 250px;
     height: 100vh;
+    min-height: 300px;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -14,10 +22,11 @@
     -webkit-animation: fadein 2s;
     animation: fadein 2s;
     background-color: $side-panel-bg;
+    position: relative;
     .header-navigation {
         display: flex;
         justify-content: space-evenly;
-        position: fixed;
+        position: absolute;
         top: 0;
         width: 20vw;
         min-width: 250px;
@@ -43,7 +52,29 @@
         }
     }
     .content-navigation {
-        color: white;
-        text-align: center;
+        @include headerResponsive;
+        .nav-item {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            cursor: pointer;
+            font-size: 25px;
+        }
     }
+
+    .contact-navigation {
+        @include headerResponsive;
+        width: 20vw;
+        min-width: 250px;
+        background-color: #8549c8;
+        position: absolute;
+        bottom: 0;
+        height: 40px;
+        cursor: pointer;
+        font-size: 20px;
+    }
+
+    a {
+        color: inherit; /* blue colors for links too */
+        text-decoration: inherit; /* no underline */
+      }
 }
