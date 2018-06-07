@@ -28,12 +28,12 @@ export default class SidePanel extends React.Component {
                         </Link>
                     </div>
                     <div className='github nav-item'>
-                        <Link to='/topics'>
+                        <Link to='/works'>
                             <FA name='github' style={iconStyle}/>
                         </Link>
                     </div>
                     <div className='resume nav-item'>
-                        <Link to='/topics'>
+                        <Link to='/works'>
                             <FA name='address-card' style={iconStyle}/>
                         </Link>
                     </div>
@@ -45,17 +45,17 @@ export default class SidePanel extends React.Component {
                         </Link>
                     </div>
                     <div className='nav-item'>
-                        <Link to='/topics'>
+                        <Link to='/works'>
                             Works
                         </Link>
                     </div>
                     <div className='nav-item'>
-                        <Link to='/topics'>
+                        <Link to='/works'>
                             Blog
                         </Link>
                     </div>
                     <div className='nav-item'>
-                        <Link to='/topics'>
+                        <Link to='/works'>
                             Services
                         </Link>
                     </div>

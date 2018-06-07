@@ -6,20 +6,11 @@ import Responsive from 'react-responsive'
 import Drawer from '@material-ui/core/SwipeableDrawer'
 import "../styles/app.scss"
 import MyStory from './myStory'
+import Home from './home'
+import Works from './works'
 
 const Desktop = props => <Responsive {...props} minWidth={992} />
 const Tablet = props => <Responsive {...props} maxWidth={991} />
-
-const Home = () => (
-    <div>
-        <h2 className='titleHeader'>Zarif Shahriar</h2>
-    </div>
-)
-const About = () => (
-    <div>
-        <h2>About</h2>
-    </div>
-)
 
 class App extends React.Component {
     constructor(props) {
@@ -41,8 +32,8 @@ class App extends React.Component {
                     <div className='content-area'>
                         <Switch>
                             <Route exact path="/" component={Home} />
-                            <Route exact path="/story" component={MyStory} />
-                            <Route exact path="/works" component={About} />
+                            <Route path="/story" component={MyStory} />
+                            <Route exact path="/works" component={Works} />
                         </Switch>
                     </div>
                     <Desktop>

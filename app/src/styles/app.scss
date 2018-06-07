@@ -1,12 +1,6 @@
 @import './reset.scss';
 @import './variables.scss';
 
-.titleHeader {
-    @include headerTitle;
-    font-size: 85px;
-    color: white;
-}
-
 p {
     @include text;
 }

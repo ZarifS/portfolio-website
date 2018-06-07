@@ -14,7 +14,7 @@ export default class MyStory extends React.Component {
                         <li>
                             <Link to={`${this.props.match.url}`}>
                                 About Me.
-                        </Link>
+                            </Link>
                         </li>
                         <li>
                             <Link to={`${this.props.match.url}/education`}>
