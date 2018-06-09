@@ -1,0 +1,60 @@
+@import './variables.scss';
+.home-container {
+    color: white;
+    background: -webkit-gradient( linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.9))), url('../images/backgrounds/car-trail.jpeg');
+    background: -webkit-linear-gradient( top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url('../images/backgrounds/car-trail.jpeg');
+    background: -o-linear-gradient( top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url('../images/backgrounds/car-trail.jpeg');
+    background: linear-gradient( to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url('../images/backgrounds/car-trail.jpeg');
+    background-size: cover;
+    height: 100%;
+    .home-header {
+        padding-top: 30vh;
+        padding-left: 40px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        .title-header {
+            @include headerTitle;
+            font-size: 75px;
+        }
+        .header {
+            @include header;
+            font-size: 35px;
+        }
+        .info {
+            @include text;
+            font-size: 15px;
+            text-align: left;
+            padding-top:20px;
+            width: 40vw;
+        }
+        @media screen and (max-width: 425px) {
+            padding-top: 20vh;
+            padding-left: 10px;
+            padding-right: 30px;
+            .title-header {
+                font-size: 60px;
+            }
+            .header {
+                font-size: 30px;
+            }
+            .info {
+                font-size: 12px;
+                width: 200px;
+            }
+        }
+
+        //Really big screen.
+        @media screen and (min-width: 1400px){
+            padding-left: 80px;
+            .title-header {
+                font-size: 85px;
+            }
+            .header {
+                font-size: 45px;
+            }
+            .info {
+                font-size: 20px;
+            }
+        }
+    }
+}

@@ -1,75 +1,57 @@
 import React from 'react'
-import {BrowserRouter, Route, Link} from 'react-router-dom'
+import { BrowserRouter, Route, Link, Switch } from 'react-router-dom'
 import SidePanel from './sidePanel'
+import MenuIcon from './menuIcon'
 import Responsive from 'react-responsive'
+import Drawer from '@material-ui/core/SwipeableDrawer'
+import "../styles/app.scss"
+import MyStory from './myStory'
+import Home from './home'
+import Works from './works'
 
-const Desktop = props => <Responsive {...props} minWidth={992}/>
-const Tablet = props => <Responsive {...props} maxWidth={991}/>
-
-const Home = () => (
-    <div>
-        <h2>Home</h2>
-    </div>
-)
-const About = () => (
-    <div>
-        <h2>About</h2>
-    </div>
-)
-
-const Topic = ({match}) => (
-    <div>
-        <h3>{match.params.topicId}</h3>
-    </div>
-)
-
-const MyStory = ({match}) => (
-    <div>
-        <h2>My Story</h2>
-        <ul>
-            <li>
-                <Link to={`${match.url}/about`}>
-                    About Me.
-                </Link>
-            </li>
-            <li>
-                <Link to={`${match.url}/education`}>
-                    My Education.
-                </Link>
-            </li>
-            <li>
-                <Link to={`${match.url}/experience`}>
-                    My Experience.
-                </Link>
-            </li>
-        </ul>
-
-        <Route path={`${match.path}/:topicId`} component={Topic}/>
-        <Route
-            exact
-            path={match.path}
-            render={() => (
-            <h3>Please select a topic.</h3>
-        )}/>
-    </div>
-)
+const Desktop = props => <Responsive {...props} minWidth={992} />
+const Tablet = props => <Responsive {...props} maxWidth={991} />
 
 class App extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            menuOpen: false
+        }
+        this.openDrawer = this
+            .openDrawer
+            .bind(this)
+    }
+    openDrawer() {
+        this.setState({ menuOpen: true })
+    }
     render() {
         return (
             <BrowserRouter>
-                <div>
-                    <div className='contentArea'>
-                        <Route exact path="/" component={Home}/>
-                        <Route path="/about" component={About}/>
-                        <Route path="/topics" component={MyStory}/>
+                <div className='app'>
+                    <div className='content-area'>
+                        <Switch>
+                            <Route exact path="/" component={Home} />
+                            <Route path="/story" component={MyStory} />
+                            <Route exact path="/works" component={Works} />
+                        </Switch>
                     </div>
-                    <div className='navigationArea'>
-                        <Desktop>
-                            < SidePanel/>
-                        </Desktop>
-                        <Tablet>Hamburger!</Tablet>
-                    </div>
+                    <Desktop>
+                        < SidePanel />
+                    </Desktop>
+                    <Tablet>
+                        <MenuIcon
+                            openDrawer={this
+                                .openDrawer
+                                .bind(this)} />
+                        <Drawer
+                            open={this.state.menuOpen}
+                            onClose={() => this.setState({ menuOpen: false })}
+                            onOpen={() => this.setState({ menuOpen: true })}
+                            anchor="right">
+                            <SidePanel closerMenu={() => this.setState({ menuOpen: false })} />
+                        </Drawer>
+                    </Tablet>
                 </div>
             </BrowserRouter>
         )

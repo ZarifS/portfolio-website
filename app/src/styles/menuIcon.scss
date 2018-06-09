@@ -1,0 +1,12 @@
+.menu {
+    height: 60px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    .menuIcon {
+        color: white;
+        font-size: .8em;
+        text-shadow: '1px 1px 1px #454545'
+    }
+}

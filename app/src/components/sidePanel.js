@@ -1,21 +1,72 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import IconButton from '@material-ui/core/IconButton'
+import FA from 'react-fontawesome'
+import "../styles/sidePanel.scss"
 
 export default class SidePanel extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {}
+    }
     render() {
+        const iconStyle = {
+            color: 'white',
+            fontSize: '1.5em'
+        };
         return (
-            <div>
-                <ul>
-                    <li>
-                        <Link to="/">Home</Link>
-                    </li>
-                    <li>
-                        <Link to="/about">About</Link>
-                    </li>
-                    <li>
-                        <Link to="/topics">Topics</Link>
-                    </li>
-                </ul>
+            <div className='side-panel-container'>
+                <div className='header-navigation'>
+                    <div className='home nav-item'>
+                        <Link to='/'>
+                            <FA name='home' style={iconStyle}/>
+                        </Link>
+                    </div>
+                    <div className='linkedIn nav-item'>
+                        <a href='https://www.linkedin.com/in/zarifshahriar/' target="_blank">
+                            <FA name='linkedin' style={iconStyle}/>
+                        </a>
+                    </div>
+                    <div className='github nav-item'>
+                        <a href='https://github.com/ZarifS' target="_blank">
+                            <FA name='github' style={iconStyle}/>
+                        </a>
+                    </div>
+                    <div className='resume nav-item'>
+                        <a href={require('../documents/zshahriar_resume.pdf')} target="_blank">
+                            <FA name='address-card' style={iconStyle}/>
+                        </a>
+                    </div>
+                </div>
+                <div className='content-navigation'>
+                    <div className='nav-item'>
+                        <Link to='/story'>
+                            My Story
+                        </Link>
+                    </div>
+                    <div className='nav-item'>
+                        <Link to='/works'>
+                            Works
+                        </Link>
+                    </div>
+                    <div className='nav-item'>
+                        <Link to='/works'>
+                            Blog
+                        </Link>
+                    </div>
+                    <div className='nav-item'>
+                        <Link to='/works'>
+                            Services
+                        </Link>
+                    </div>
+                </div>
+                <div className='contact-navigation'>
+                    <div className='nav-item'>
+                        <Link to='/story'>
+                            Contact
+                        </Link>
+                    </div>
+                </div>
             </div>
         )
     }

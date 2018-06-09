@@ -1,0 +1,17 @@
+$side-panel-bg: #151515;
+$side-panel-text: #fff;
+//Fonts
+@mixin headerTitle {
+    font-family: 'Dosis', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+@mixin header {
+    font-family: 'Dosis', sans-serif;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+@mixin text{
+    font-family: 'Palanquin', sans-serif;
+    font-weight: 300;
+}
