@@ -25,6 +25,9 @@ module.exports = {
                     limit: 8000, // Convert images < 8kb to base64 strings
                     name: 'images/[name].[ext]'
                 }
+            }, {
+                test: /\.(pdf|docx)$/,
+                loader: 'file-loader?name=documents/[name].[ext]',
             }
         ]
     },
