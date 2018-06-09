@@ -9,11 +9,10 @@ p {
     height: 100%;
     display: -ms-flexbox;
     display: flex;
-    overflow: auto;
 }
 
 .content-area {
-    height: 100vh;
+    min-height: 100vh;
     background-color: rgb(196, 196, 196);
     @media screen and (min-width: 992px) {
         width: 80vw;

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import '../styles/home.scss'
 class Home extends Component {
     constructor(props) {
@@ -9,7 +9,11 @@ class Home extends Component {
         return (
             <div className='home-container'>
                 <div className='home-header'>
-                    <h2 className='titleHeader'>Zarif Shahriar</h2>
+                    <div className='title-header'>Zarif Shahriar</div>
+                    <div className='header'>Developer. Designer. Entreprenuer.</div>
+                    <div className='info'>Software Engineering student at the University of Ottawa
+                        and a designer at heart. I love to create beautfiul and interesting things. Lets
+                        get to know each other.</div>
                 </div>
             </div>
         );

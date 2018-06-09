@@ -61,7 +61,11 @@ export default class SidePanel extends React.Component {
                     </div>
                 </div>
                 <div className='contact-navigation'>
-                    <div className='nav-item'>Contact</div>
+                    <div className='nav-item'>
+                        <Link to='/story'>
+                            Contact
+                        </Link>
+                    </div>
                 </div>
             </div>
         )
