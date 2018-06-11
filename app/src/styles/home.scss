@@ -20,7 +20,7 @@
             @include header;
             font-size: 35px;
         }
-        .info {
+        .text {
             @include text;
             font-size: 15px;
             text-align: left;
@@ -28,33 +28,16 @@
             width: 40vw;
         }
         @media screen and (max-width: 425px) {
+            @include mobileContent;
             padding-top: 20vh;
             padding-left: 10px;
-            padding-right: 30px;
-            .title-header {
-                font-size: 60px;
-            }
-            .header {
-                font-size: 30px;
-            }
-            .info {
-                font-size: 12px;
+            .text {
                 width: 200px;
             }
         }
-
-        //Really big screen.
         @media screen and (min-width: 1400px){
+            @include desktopContent;
             padding-left: 80px;
-            .title-header {
-                font-size: 85px;
-            }
-            .header {
-                font-size: 45px;
-            }
-            .info {
-                font-size: 20px;
-            }
         }
     }
 }

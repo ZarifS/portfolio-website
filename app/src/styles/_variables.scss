@@ -15,3 +15,35 @@ $side-panel-text: #fff;
     font-family: 'Palanquin', sans-serif;
     font-weight: 300;
 }
+
+@mixin mobileContent {
+    padding-right: 30px;
+    .title-header {
+        font-size: 60px;
+    }
+    .header {
+        font-size: 30px;
+    }
+    .textHeader {
+        font-size: 14px;
+    }
+    .text {
+        font-size: 12px;
+    }
+}
+
+@mixin desktopContent {
+    .title-header {
+        font-size: 85px;
+    }
+    .header {
+        font-size: 45px;
+    }
+    .textHeader {
+        font-size: 24px;
+    }
+    .text {
+        font-size: 20px;
+    }
+
+}

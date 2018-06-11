@@ -1,5 +1,6 @@
 import React from 'react'
 import { Route, Link, Switch } from 'react-router-dom'
+import '../styles/story.scss'
 
 export default class MyStory extends React.Component {
     constructor(props) {
@@ -9,7 +10,10 @@ export default class MyStory extends React.Component {
         return (
             <div className='story-container'>
                 <div className='story-navigation'>
-                    <h2>My Story</h2>
+                    <div className='story-header'>
+                        <h2>My Story</h2>
+                        <hr />
+                    </div>
                     <ul>
                         <li>
                             <Link to={`${this.props.match.url}`}>
@@ -40,12 +44,12 @@ export default class MyStory extends React.Component {
     }
 }
 
-class Education extends React.Component{
+class Education extends React.Component {
     constructor(props) {
         console.log("In the education panel!", props)
         super(props)
     }
-    render(){
+    render() {
         return (
             <h1>Education</h1>
         )
