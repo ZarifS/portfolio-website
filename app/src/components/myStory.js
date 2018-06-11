@@ -7,7 +7,7 @@ export default class MyStory extends React.Component {
     }
     render() {
         return (
-            <div>
+            <div className='story-container'>
                 <div className='story-navigation'>
                     <h2>My Story</h2>
                     <ul>
