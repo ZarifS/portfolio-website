@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Link, Switch } from 'react-router-dom'
+import {Route, Link, Switch} from 'react-router-dom'
 import '../styles/story.scss'
 
 export default class MyStory extends React.Component {
@@ -10,11 +10,11 @@ export default class MyStory extends React.Component {
         return (
             <div className='story-container'>
                 <div className='story-navigation'>
-                    <div className='story-header'>
-                        <h2>My Story</h2>
-                        <hr />
+                    <div className='header'>
+                        My Story
+                        <hr/>
                     </div>
-                    <ul>
+                    {/* <ul>
                         <li>
                             <Link to={`${this.props.match.url}`}>
                                 About Me.
@@ -28,15 +28,18 @@ export default class MyStory extends React.Component {
                         <li>
                             <Link to={`${this.props.match.url}/experience`}>
                                 My Experience.
-                </Link>
+                            </Link>
                         </li>
-                    </ul>
+                    </ul> */}
                 </div>
                 <div className='story-content'>
                     <Switch>
-                        <Route exact path={this.props.match.path} component={About} />
-                        <Route exact path={`${this.props.match.path}/education`} component={Education} />
-                        <Route exact path={`${this.props.match.path}/experience`} component={Experience} />
+                        <Route exact path={this.props.match.path} component={About}/>
+                        <Route exact path={`${this.props.match.path}/education`} component={Education}/>
+                        <Route
+                            exact
+                            path={`${this.props.match.path}/experience`}
+                            component={Experience}/>
                     </Switch>
                 </div>
             </div>
@@ -56,14 +59,14 @@ class Education extends React.Component {
     }
 }
 
-const Experience = ({ match }) => (
+const Experience = ({match}) => (
     <div>
         <h3>Experience</h3>
     </div>
 )
 
-const About = ({ match }) => (
+const About = ({match}) => (
     <div>
-        <h3>Hi my name is Zarif Shahriar!</h3>
+        <h3 className='text'>Hi my name is Zarif Shahriar!</h3>
     </div>
 )

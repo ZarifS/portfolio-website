@@ -18,6 +18,7 @@ $side-panel-text: #fff;
 
 @mixin mobileContent {
     padding-right: 30px;
+    padding-left:10px;
     .title-header {
         font-size: 60px;
     }
