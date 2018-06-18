@@ -17,22 +17,22 @@ export default class SidePanel extends React.Component {
                 <div className='header-navigation'>
                     <div className='home nav-item'>
                         <Link to='/'>
-                            <i class="fas fa-home" style={iconStyle}></i>
+                            <i className="fas fa-home" style={iconStyle}></i>
                         </Link>
                     </div>
                     <div className='linkedIn nav-item'>
                         <a href='https://www.linkedin.com/in/zarifshahriar/' target="_blank">
-                            <i class='fab fa-linkedin-in' style={iconStyle}></i>
+                            <i className='fab fa-linkedin-in' style={iconStyle}></i>
                         </a>
                     </div>
                     <div className='github nav-item'>
                         <a href='https://github.com/ZarifS' target="_blank">
-                            <i class='fab fa-github' style={iconStyle}/>
+                            <i className='fab fa-github' style={iconStyle}/>
                         </a>
                     </div>
                     <div className='resume nav-item'>
                         <a href={require('../documents/zshahriar_resume.pdf')} target="_blank">
-                        <i class="fas fa-address-card" style={iconStyle}></i>
+                        <i className="fas fa-address-card" style={iconStyle}></i>
                         </a>
                     </div>
                 </div>

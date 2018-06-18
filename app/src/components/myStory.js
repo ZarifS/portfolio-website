@@ -5,12 +5,25 @@ import '../styles/story.scss'
 export default class MyStory extends React.Component {
     constructor(props) {
         super(props)
+        this.state = {
+            aboutClicked: true,
+            educationClicked: false,
+            experienceClicked: false
+        }
+        this.handleNavClick = this.handleNavClick.bind(this)
+    }
+
+    handleNavClick(topic) {
+        if (topic === 'about') {
+            this.setState({aboutClicked: true, educationClicked: false, experienceClicked: false})
+        } else if (topic === 'education') {
+            this.setState({aboutClicked: false, educationClicked: true, experienceClicked: false})
+        } else {
+            this.setState({aboutClicked: false, educationClicked: false, experienceClicked: true})
+        }
     }
     render() {
-        const iconStyle = {
-            color: 'white',
-            fontSize: '1.5em'
-        };
+        const iconStyle = {};
         return (
             <div className='story-container'>
                 <div className='story-navigation'>
@@ -20,19 +33,22 @@ export default class MyStory extends React.Component {
                     </div>
                     <div className='navbar'>
                         <div className='nav-item'>
-                            <i class="fas fa-book-open" style={iconStyle}>
-                                <Link to={`${this.props.match.url}`}></Link>
-                            </i>
+                            <Link to={`${this.props.match.url}`}>
+                                <i className="fas fa-book-open" style={iconStyle}></i>
+                            </Link>
+                            {this.state.aboutClicked ? <hr/> :  <div></div> }
                         </div>
                         <div className='nav-item'>
-                            <i class="fas fa-graduation-cap" style={iconStyle}>
-                                <Link to={`${this.props.match.url}/education`}></Link>
-                            </i>
+                            <Link to={`${this.props.match.url}/education`}>
+                                <i className="fas fa-graduation-cap" style={iconStyle}></i>
+                            </Link>
+                            {this.state.educationClicked ? <hr/> :  <div></div> }
                         </div>
                         <div className='nav-item'>
-                            <i class="fas fa-briefcase" style={iconStyle}>
-                                <Link to={`${this.props.match.url}/experience`}></Link>
-                            </i>
+                            <Link to={`${this.props.match.url}/experience`}>
+                                <i className="fas fa-briefcase" style={iconStyle}></i>
+                            </Link>
+                            {this.state.experienceClicked ? <hr/> :  <div></div> }
                         </div>
                     </div>
                 </div>

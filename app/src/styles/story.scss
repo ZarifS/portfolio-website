@@ -27,10 +27,23 @@
         .navbar {
             display: flex;
             justify-content: center;
-            .nav-item{
-
+            .nav-item {
+                padding-left: 20px;
+                padding-right: 20px;
+                i {
+                    color: white;
+                    font-size: 2em;
+                }
+                hr {
+                    height: .20rem;
+                    background: mediumpurple;
+                    width: 2em;
+                    border: none;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-top: 0.5rem;
+                }
             }
-
         }
         @media screen and (max-width: 425px) {
             @include mobileContent;
@@ -42,12 +55,12 @@
     .story-content {
         @include text;
         margin-left: auto;
-        margin-right:auto;
+        margin-right: auto;
         width: 80%;
         @media screen and (max-width: 425px) {
             @include mobileContent;
             width: auto;
-            padding-left:10px;
+            padding-left: 10px;
         }
         @media screen and (min-width: 1400px) {
             @include desktopContent;
