@@ -7,6 +7,10 @@ export default class MyStory extends React.Component {
         super(props)
     }
     render() {
+        const iconStyle = {
+            color: 'white',
+            fontSize: '1.5em'
+        };
         return (
             <div className='story-container'>
                 <div className='story-navigation'>
@@ -14,23 +18,23 @@ export default class MyStory extends React.Component {
                         My Story
                         <hr/>
                     </div>
-                    {/* <ul>
-                        <li>
-                            <Link to={`${this.props.match.url}`}>
-                                About Me.
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to={`${this.props.match.url}/education`}>
-                                My Education.
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to={`${this.props.match.url}/experience`}>
-                                My Experience.
-                            </Link>
-                        </li>
-                    </ul> */}
+                    <div className='navbar'>
+                        <div className='nav-item'>
+                            <i class="fas fa-book-open" style={iconStyle}>
+                                <Link to={`${this.props.match.url}`}></Link>
+                            </i>
+                        </div>
+                        <div className='nav-item'>
+                            <i class="fas fa-graduation-cap" style={iconStyle}>
+                                <Link to={`${this.props.match.url}/education`}></Link>
+                            </i>
+                        </div>
+                        <div className='nav-item'>
+                            <i class="fas fa-briefcase" style={iconStyle}>
+                                <Link to={`${this.props.match.url}/experience`}></Link>
+                            </i>
+                        </div>
+                    </div>
                 </div>
                 <div className='story-content'>
                     <Switch>

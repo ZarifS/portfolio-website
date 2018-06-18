@@ -1,7 +1,5 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import IconButton from '@material-ui/core/IconButton'
-import FA from 'react-fontawesome'
 import "../styles/sidePanel.scss"
 
 export default class SidePanel extends React.Component {
@@ -19,22 +17,22 @@ export default class SidePanel extends React.Component {
                 <div className='header-navigation'>
                     <div className='home nav-item'>
                         <Link to='/'>
-                            <FA name='home' style={iconStyle}/>
+                            <i class="fas fa-home" style={iconStyle}></i>
                         </Link>
                     </div>
                     <div className='linkedIn nav-item'>
                         <a href='https://www.linkedin.com/in/zarifshahriar/' target="_blank">
-                            <FA name='linkedin' style={iconStyle}/>
+                            <i class='fab fa-linkedin-in' style={iconStyle}></i>
                         </a>
                     </div>
                     <div className='github nav-item'>
                         <a href='https://github.com/ZarifS' target="_blank">
-                            <FA name='github' style={iconStyle}/>
+                            <i class='fab fa-github' style={iconStyle}/>
                         </a>
                     </div>
                     <div className='resume nav-item'>
                         <a href={require('../documents/zshahriar_resume.pdf')} target="_blank">
-                            <FA name='address-card' style={iconStyle}/>
+                        <i class="fas fa-address-card" style={iconStyle}></i>
                         </a>
                     </div>
                 </div>
