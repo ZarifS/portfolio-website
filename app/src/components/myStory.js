@@ -10,7 +10,19 @@ export default class MyStory extends React.Component {
             educationClicked: false,
             experienceClicked: false
         }
-        this.handleNavClick = this.handleNavClick.bind(this)
+        this.handleNavClick = this
+            .handleNavClick
+            .bind(this)
+    }
+
+    componentDidMount(){
+        let url = this.props.location.pathname
+        if(url.includes('education')) {
+            this.handleNavClick('education')
+        }
+        else if(url.includes('experience')) {
+            this.handleNavClick('education')
+        }
     }
 
     handleNavClick(topic) {
@@ -32,23 +44,20 @@ export default class MyStory extends React.Component {
                         <hr/>
                     </div>
                     <div className='navbar'>
-                        <div className='nav-item'>
-                            <Link to={`${this.props.match.url}`}>
+                        <div className={this.state.aboutClicked ? 'nav-item active' :  'nav-item'} onClick={() => this.handleNavClick('about')}>
+                            <Link to={`${this.props.match.url}`} className='active'>
                                 <i className="fas fa-book-open" style={iconStyle}></i>
                             </Link>
-                            {this.state.aboutClicked ? <hr/> :  <div></div> }
                         </div>
-                        <div className='nav-item'>
+                        <div className={this.state.educationClicked ? 'nav-item active' :  'nav-item'} onClick={() => this.handleNavClick('education')}>
                             <Link to={`${this.props.match.url}/education`}>
                                 <i className="fas fa-graduation-cap" style={iconStyle}></i>
                             </Link>
-                            {this.state.educationClicked ? <hr/> :  <div></div> }
                         </div>
-                        <div className='nav-item'>
+                        <div className={this.state.experienceClicked ? 'nav-item active' :  'nav-item'} onClick={() => this.handleNavClick('experience')}>
                             <Link to={`${this.props.match.url}/experience`}>
                                 <i className="fas fa-briefcase" style={iconStyle}></i>
                             </Link>
-                            {this.state.experienceClicked ? <hr/> :  <div></div> }
                         </div>
                     </div>
                 </div>
