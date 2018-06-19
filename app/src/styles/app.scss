@@ -9,6 +9,18 @@ p {
     height: 100%;
     display: -ms-flexbox;
     display: flex;
+     /* width */
+     ::-webkit-scrollbar {
+        width: 10px;
+    }
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: #454545;
+    }
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: grey;
+    }
 }
 
 .content-area {
