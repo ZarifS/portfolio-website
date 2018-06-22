@@ -9,7 +9,6 @@
     height: 100%;
     .story-navigation {
         padding-top: 20px;
-        padding-bottom: 20px;
         .header {
             @include header;
             font-size: 35px;
@@ -85,10 +84,10 @@
     .story-content {
         margin-left: auto;
         margin-right: auto;
-        width: 90%;
+        width: 80%;
         .title-header {
-            @include headerTitle;
-            font-size: 75px;
+            @include text-header;
+            font-size: 28px;
         }
         .text-header {
             @include text-header;
@@ -115,9 +114,48 @@
                 overflow: auto;
                 padding-right: 30px;
             }
-            @media screen and (min-height: 1100px){
+            @media screen and (min-height: 1100px) {
                 height: 100%;
             }
+        }
+        .education{
+            .title-header{
+                text-align: center;
+                font-size: 30px;
+            }
+            .education-content{
+                display: flex;
+                justify-content: space-between;
+                .formal {
+                    display: flex;
+                    flex-direction: column;
+                    .text-header {
+                        text-align: center;
+                        padding-bottom: 10px;
+                    }
+                    .university {
+                        display: flex;
+                        align-items: center;
+                        .logo{
+                            width: 100px;
+                            height: 100px;
+                            background-image: url('../images/logos/uottawa.png');
+                            background-size: contain;
+                        }
+                        .info {
+                            padding-left: 20px;
+                            display: column;
+                            .text {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+                .informal {
+
+                }
+            }
+
         }
         @media screen and (max-width: 425px) {
             @include mobileContent;

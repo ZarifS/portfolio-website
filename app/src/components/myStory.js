@@ -86,24 +86,6 @@ export default class MyStory extends Component {
     }
 }
 
-class Education extends Component {
-    constructor(props) {
-        console.log("In the education panel!", props)
-        super(props)
-    }
-    render() {
-        return (
-            <h1>Education</h1>
-        )
-    }
-}
-
-const Experience = ({match}) => (
-    <div>
-        <h3>Experience</h3>
-    </div>
-)
-
 class About extends Component {
     render() {
         return (
@@ -175,3 +157,39 @@ class About extends Component {
         )
     }
 }
+
+class Education extends Component {
+    constructor(props) {
+        super(props)
+    }
+    render() {
+        return (
+            <div className='education'>
+                <div className='title-header'>Life Long Learner.</div>
+                <div className='education-content'>
+                    <div className='formal'>
+                        <div className='text-header'>Formal Education</div>
+                        <div className='university'>
+                            <div className='logo'></div>
+                            <div className='info'>
+                                <div className='text'>UNIVERSITY OF OTTAWA</div>
+                                <div className='text'>BSc. Software Engineering</div>
+                                <div className='text'>Graduating April 2020</div>
+                                <div className='text'>CGPA: 9/10</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='informal'>
+                        <div className='text-header'>Informal Education</div>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+}
+
+const Experience = ({match}) => (
+    <div>
+        <h3>Experience</h3>
+    </div>
+)
