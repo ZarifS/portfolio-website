@@ -118,28 +118,42 @@
                 height: 100%;
             }
         }
-        .education{
-            .title-header{
+        .education {
+            .title-header {
                 text-align: center;
                 font-size: 30px;
             }
-            .education-content{
+            .education-content {
                 display: flex;
                 justify-content: space-between;
-                .formal {
+                @media screen and (max-width: 760px) {
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .education-item {
                     display: flex;
                     flex-direction: column;
+                    min-width: 330px;
+                    padding-bottom: 30px;
                     .text-header {
                         text-align: center;
                         padding-bottom: 10px;
                     }
-                    .university {
+                    .institution {
                         display: flex;
                         align-items: center;
-                        .logo{
+                        padding-bottom: 10px;
+                        .logo-uottawa {
                             width: 100px;
                             height: 100px;
                             background-image: url('../images/logos/uottawa.png');
+                            background-size: contain;
+                        }
+                        .logo-udemy {
+                            width: 100px;
+                            height: 100px;
+                            background-image: url('../images/logos/udemy.png');
                             background-size: contain;
                         }
                         .info {
@@ -148,14 +162,25 @@
                             .text {
                                 font-size: 14px;
                             }
+                            .title {
+                                font-size: 16px !important;
+                                padding-bottom: 5px;
+                            }
+                        }
+                    }
+                    .notable {
+                        display: flex;
+                        flex-direction: column;
+                        .text {
+                            font-size: 14px;
+                        }
+                        .title {
+                            font-size: 18px !important;
+                            padding-bottom: 5px;
                         }
                     }
                 }
-                .informal {
-
-                }
             }
-
         }
         @media screen and (max-width: 425px) {
             @include mobileContent;

@@ -167,20 +167,61 @@ class Education extends Component {
             <div className='education'>
                 <div className='title-header'>Life Long Learner.</div>
                 <div className='education-content'>
-                    <div className='formal'>
+                    <div className='education-item'>
                         <div className='text-header'>Formal Education</div>
-                        <div className='university'>
-                            <div className='logo'></div>
+                        <div className='institution'>
+                            <div className='logo-uottawa'></div>
                             <div className='info'>
-                                <div className='text'>UNIVERSITY OF OTTAWA</div>
-                                <div className='text'>BSc. Software Engineering</div>
+                                <div className='text title'>UNIVERSITY OF OTTAWA</div>
+                                <div className='text'>
+                                    <i>BSc. Software Engineering</i>
+                                </div>
                                 <div className='text'>Graduating April 2020</div>
                                 <div className='text'>CGPA: 9/10</div>
                             </div>
                         </div>
+                        <div className='notable'>
+                            <div className='text title'>Notable Courses</div>
+                            <div className='text'>Data Structures and Algorithms
+                            </div>
+                            <div className='text'>Quality Assurance
+                            </div>
+                            <div className='text'>User Interface Design
+                            </div>
+                            <div className='text'>Operating Systems
+                            </div>
+                            <div className='text'>Discrete Math and Structures
+                            </div>
+                            <div className='text'>Software Construction
+                            </div>
+                            <div className='text'>Professional Engineering Practice
+                            </div>
+                        </div>
                     </div>
-                    <div className='informal'>
+                    <div className='education-item'>
                         <div className='text-header'>Informal Education</div>
+                        <div className='institution'>
+                            <div className='logo-udemy'></div>
+                            <div className='info'>
+                                <div className='text title'>UDEMY ONLINE</div>
+                                <div className='text'>
+                                    <i>Online Educational Platform</i>
+                                </div>
+                                <div className='text'>Enrolled 2016 - Present</div>
+                                <div className='text'>Certified Instructors</div>
+                            </div>
+                        </div>
+                        <div className='notable'>
+                            <div className='text title'>Courses Taken</div>
+                            <div className='text'>
+                                <i>Web Development by Rob Percival</i><br/>
+                                Complete course on HTML/CSS/JS, PHP, MySQL, Bootstrap and API's
+                            </div>
+                            <div className='text'>
+                                <i>Android Development by Rob Percival</i><br/>
+                                Complete course on Android design and Java development.
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
