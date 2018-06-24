@@ -1,6 +1,9 @@
 import React, {Component} from 'react'
 import {Route, Link, Switch} from 'react-router-dom'
+import Responsive from 'react-responsive'
 import '../styles/story.scss'
+import ciena from './../images/logos/ciena.svg'
+const Mobile = props => <Responsive {...props} maxWidth={425}/>
 
 export default class MyStory extends Component {
     constructor(props) {
@@ -20,7 +23,7 @@ export default class MyStory extends Component {
         if (url.includes('education')) {
             this.handleNavClick('education')
         } else if (url.includes('experience')) {
-            this.handleNavClick('education')
+            this.handleNavClick('experience')
         }
     }
 
@@ -229,8 +232,61 @@ class Education extends Component {
     }
 }
 
-const Experience = ({match}) => (
-    <div>
-        <h3>Experience</h3>
-    </div>
-)
+class Experience extends Component {
+    render() {
+        const ciena = {
+            title: 'Ciena',
+            role: 'Software Developer',
+            logo: '../images/logos/ciena.png',
+            color: '8549c8'
+        }
+        return (
+            <div className='experience'>
+                <div className='title-header'>Where passion meets software.</div>
+                <div className='experience-content'>
+                    <div className='experience-item'>
+                        <WorkCard item={ciena}/>
+                    </div>
+                    <div className='experience-item'>
+                        <WorkCard item={ciena}/>
+                    </div>
+                    <div className='experience-item'>
+                        <WorkCard item={ciena}/>
+                    </div>
+                    <div className='experience-item'>
+                        <WorkCard item={ciena}/>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+}
+
+class WorkCard extends Component {
+    constructor(props) {
+        super(props)
+        console.log(props)
+        this.state = {
+            title: props.item.title,
+            role: props.item.role,
+            logo: props.item.logo,
+            color: props.item.color
+        }
+    }
+    render() {
+        const style = {
+            'backgroundColor': `#${this.state.color}`
+        }
+        return (
+            <div className='work-card' style={style}>
+                <div className='work-title'>
+                    <img src={ciena} className='work-logo'/>
+                </div>
+                <Mobile>
+                    <div className='work-role'>
+                        {this.state.role}</div>
+                </Mobile>
+            </div>
+        )
+    }
+}

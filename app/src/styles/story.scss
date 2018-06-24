@@ -87,7 +87,7 @@
         width: 80%;
         .title-header {
             @include text-header;
-            font-size: 28px;
+            font-size: 25px;
         }
         .text-header {
             @include text-header;
@@ -121,7 +121,6 @@
         .education {
             .title-header {
                 text-align: center;
-                font-size: 30px;
             }
             .education-content {
                 display: flex;
@@ -181,6 +180,36 @@
                     }
                 }
             }
+        }
+        .experience {
+            .title-header {
+                text-align: center;
+            }
+            .experience-content {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+
+                .experience-item{
+                    margin: 10px;
+                }
+            }
+        }
+        .work-card {
+            width: 350px;
+            height: 200px;
+            border-radius: 3px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .work-title {
+                .work-logo {
+                    height: 100px;
+                    width: 200px;
+                }
+            }
+            .work-role {}
         }
         @media screen and (max-width: 425px) {
             @include mobileContent;
