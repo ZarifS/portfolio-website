@@ -14,8 +14,8 @@ const ciena = {
     role: 'Web Engineer',
     logo: cienaLogo,
     color1: '8148c4',
-    color2:'4f13b3',
-    color3:'6e11e6',
+    color2:'702fd8',
+    color3:'2216d6',
     duration: 'Jan 2017 - May 2017',
     info: 'Some info for my work'
 }
