@@ -8,6 +8,7 @@ import "../styles/app.scss"
 import StoryPageRouteHandler from './myStory'
 import Home from './home'
 import Works from './works'
+import InDevelopment from './inDevelopment'
 
 const Desktop = props => <Responsive {...props} minWidth={992} />
 const Tablet = props => <Responsive {...props} maxWidth={991} />
@@ -33,7 +34,10 @@ class App extends React.Component {
                         <Switch>
                             <Route exact path="/" component={Home} />
                             <Route path="/story" component={StoryPageRouteHandler} />
-                            <Route exact path="/works" component={Works} />
+                            <Route exact path="/works" component={InDevelopment} />
+                            <Route exact path="/blog" component={InDevelopment} />
+                            <Route exact path="/services" component={InDevelopment} />
+                            <Route exact path="/contact" component={InDevelopment} />
                         </Switch>
                     </div>
                     <Desktop>

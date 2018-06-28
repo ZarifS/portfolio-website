@@ -1,7 +1,7 @@
 $side-panel-bg: #151515;
 $side-panel-text: #fff;
 //Fonts
-@mixin headerTitle {
+@mixin title {
     font-family: 'Dosis', sans-serif;
     font-weight: 400;
     text-transform: uppercase;
@@ -27,13 +27,16 @@ $side-panel-text: #fff;
 @mixin mobileContent {
     padding-right: 30px;
     padding-left:10px;
-    .title-header {
+    .title {
         font-size: 60px;
     }
-    .header {
+    .title-header {
         font-size: 30px;
     }
-    .textHeader {
+    .header {
+        font-size: 24px;
+    }
+    .text-header {
         font-size: 18px;
     }
     .text {
@@ -42,14 +45,17 @@ $side-panel-text: #fff;
 }
 
 @mixin desktopContent {
-    .title-header {
+    .title {
         font-size: 85px;
     }
-    .header {
+    .title-header {
         font-size: 45px;
     }
-    .textHeader {
+    .header {
         font-size: 30px;
+    }
+    .text-header {
+        font-size: 25px;
     }
     .text {
         font-size: 20px;

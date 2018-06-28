@@ -1,5 +1,5 @@
-import React, {Component} from 'react'
-import {Link} from 'react-router-dom'
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import IconButton from '@material-ui/core/IconButton';
 import '../styles/workPage.scss'
 
@@ -32,24 +32,26 @@ export default class WorkPage extends Component {
                     <Link to='/story/experience'>
                         <IconButton
                             style={{
-                            'marginLeft': '5px',
-                            'marginTop': '10px',
-                            'marginBottom' : '10px'
-                        }}>
+                                'marginLeft': '20px',
+                                'marginTop': '20px',
+                                'marginBottom': '10px'
+                            }}>
                             <i className="far fa-times-circle" style={iconStyle}></i>
                         </IconButton>
                     </Link>
                 </div>
                 <div className='work-page-container'>
-                    <div className='header'>
-                        <img src={this.state.logo} className='work-logo'/>
-                        <hr/>
+                    <div className='work-page-header'>
+                        <img src={this.state.logo} className='work-logo' />
+                        <hr />
                     </div>
                     <div className='position'>
-                        <div className='text-header'>{this.state.role}</div>
-                        <div className='text-header'>{this.state.duration}</div>
+                        <div className='header'>{this.state.role}</div>
+                        <div className='text-header'><i>{this.state.duration}</i></div>
                     </div>
-                    <div className='position-info'>{this.state.info}</div>
+                    <div className='position-info'>
+                        <div className='text'>{this.state.info}</div>
+                    </div>
                     <div className='position-chips'></div>
                 </div>
             </div>

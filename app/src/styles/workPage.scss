@@ -15,7 +15,8 @@
         margin-right: auto;
         width: 80%;
         @include text;
-        .header {
+        color: white;
+        .work-page-header {
             padding-top: 20vh;
             width: 205px;
             img {
@@ -31,6 +32,13 @@
                 margin-right: 0px;
             }
         }
+        .position {
+            line-height: 1em;
+            font-size: 25px;
+        }
+        .position-info {
+            margin-top: 5vh;
+        }
         @media screen and (max-width: 425px) {
             @include mobileContent;
             width: auto;
@@ -40,6 +48,9 @@
             @include desktopContent;
             width: 70%;
             font-size: 30px;
+            .position {
+                line-height: 1.2em;
+            }
         }
     }
 }

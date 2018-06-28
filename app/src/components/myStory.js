@@ -115,7 +115,7 @@ export class MyStory extends Component {
         return (
             <div className='story-container'>
                 <div className='story-navigation'>
-                    <div className='header'>
+                    <div className='title-header'>
                         My Story
                         <hr/>
                     </div>
