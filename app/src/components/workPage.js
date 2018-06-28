@@ -46,7 +46,7 @@ export default class WorkPage extends Component {
                         <hr />
                     </div>
                     <div className='position'>
-                        <div className='header'>{this.state.role}</div>
+                        <div className='title-header'>{this.state.role}</div>
                         <div className='text-header'><i>{this.state.duration}</i></div>
                     </div>
                     <div className='position-info'>

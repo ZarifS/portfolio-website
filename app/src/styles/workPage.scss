@@ -33,24 +33,31 @@
             }
         }
         .position {
-            line-height: 1em;
-            font-size: 25px;
+            line-height: 2em;
+            .title-header {
+                font-size: 35px;
+            }
+            .text-header {
+                font-size: 24px;
+            }
+            @media screen and (max-width: 425px) {
+                @include mobileContent;
+                line-height: 1.2
+            }
+            @media screen and (min-width: 1400px) {
+                @include desktopContent;
+                line-height: 2.5em;
+            }
         }
         .position-info {
             margin-top: 5vh;
         }
         @media screen and (max-width: 425px) {
-            @include mobileContent;
             width: auto;
             padding-left: 10px;
         }
         @media screen and (min-width: 1400px) {
-            @include desktopContent;
             width: 70%;
-            font-size: 30px;
-            .position {
-                line-height: 1.2em;
-            }
         }
     }
 }
