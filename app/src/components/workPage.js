@@ -9,24 +9,31 @@ export default class WorkPage extends Component {
             title: props.item.title,
             role: props.item.role,
             logo: props.item.logo,
-            color: props.item.color,
+            color1: props.item.color1,
+            color2: props.item.color2,
+            color3: props.item.color3,
             duration: props.item.duration,
             info: props.item.info
         }
     }
     render() {
+        const style = {
+            'background': `linear-gradient(to bottom left, #${this.state.color1}, #${this.state.color3}, #${this.state.color3})`
+        }
         return (
-            <div className='work-page'>
-                <div className='header'>
-                    <img src={this.state.logo} className='work-logo'/>
-                    <hr/>
+            <div className='work-page' style={style}>
+                <div className='work-page-container'>
+                    <div className='header'>
+                        <img src={this.state.logo} className='work-logo'/>
+                        <hr/>
+                    </div>
+                    <div className='position'>
+                        <div className='text-header'>{this.state.role}</div>
+                        <div className='text-header'>{this.state.duration}</div>
+                    </div>
+                    <div className='position-info'>{this.state.info}</div>
+                    <div className='position-chips'></div>
                 </div>
-                <div className='position'>
-                    <div className='text-header'>{this.state.role}</div>
-                    <div className='text-header'>{this.state.duration}</div>
-                </div>
-                <div className='position-info'>{this.state.info}</div>
-                <div className='position-chips'></div>
             </div>
         )
     }

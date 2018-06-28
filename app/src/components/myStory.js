@@ -13,7 +13,9 @@ const ciena = {
     title: 'Ciena',
     role: 'Web Engineer',
     logo: cienaLogo,
-    color: '8549c8',
+    color1: '8148c4',
+    color2:'4f13b3',
+    color3:'6e11e6',
     duration: 'Jan 2017 - May 2017',
     info: 'Some info for my work'
 }
@@ -21,7 +23,9 @@ const canada = {
     title: 'canada',
     role: 'Software Engineer',
     logo: canadaLogo,
-    color: '4b4d4d',
+    color1: 'a8a8a8',
+    color2:'a8a8a8',
+    color3:'7d7d7d',
     duration: 'Jan 2017 - May 2017',
     info: 'Some info for my work'
 }
@@ -29,7 +33,9 @@ const ibm = {
     title: 'ibm',
     role: 'Software Engineer',
     logo: ibmLogo,
-    color: '1d6ab2',
+    color1: '0f98ca',
+    color2:'2554ae',
+    color3:'2d50ce',
     duration: 'Jan 2017 - May 2017',
     info: 'Some info for my work'
 }
@@ -37,7 +43,9 @@ const kinaxis = {
     title: 'kinaxis',
     role: 'Web Engineer',
     logo: kinaxisLogo,
-    color: 'aa1324',
+    color1: 'ff0034',
+    color2:'a61818',
+    color3:'a61818',
     duration: 'Jan 2017 - May 2017',
     info: 'Some info for my work'
 }
@@ -304,7 +312,7 @@ class WorkCard extends Component {
             title: props.item.title,
             role: props.item.role,
             logo: props.item.logo,
-            color: props.item.color
+            color: props.item.color2
         }
     }
     render() {
