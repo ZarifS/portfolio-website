@@ -5,7 +5,7 @@ import MenuIcon from './menuIcon'
 import Responsive from 'react-responsive'
 import Drawer from '@material-ui/core/SwipeableDrawer'
 import "../styles/app.scss"
-import MyStory from './myStory'
+import StoryPageRouteHandler from './myStory'
 import Home from './home'
 import Works from './works'
 
@@ -32,7 +32,7 @@ class App extends React.Component {
                     <div className='content-area'>
                         <Switch>
                             <Route exact path="/" component={Home} />
-                            <Route path="/story" component={MyStory} />
+                            <Route path="/story" component={StoryPageRouteHandler} />
                             <Route exact path="/works" component={Works} />
                         </Switch>
                     </div>
