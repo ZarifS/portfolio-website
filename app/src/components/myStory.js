@@ -324,10 +324,6 @@ class WorkCard extends Component {
                 <div className='work-title'>
                     <img src={this.state.logo} className='work-logo'/>
                 </div>
-                <Mobile>
-                    <div className='text work-role'>
-                        {this.state.role}</div>
-                </Mobile>
             </div>
         )
     }
