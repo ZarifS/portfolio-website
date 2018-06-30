@@ -120,16 +120,13 @@
             }
         }
         .education {
-            .title-header {
-                text-align: center;
-            }
             .education-content {
                 display: flex;
-                justify-content: space-between;
+                justify-content: space-evenly;
                 @media screen and (max-width: 760px) {
                     flex-wrap: wrap;
                     align-items: center;
-                    justify-content: center;
+                    justify-content: space-evenly;
                 }
                 .education-item {
                     display: flex;
@@ -170,6 +167,7 @@
                     .notable {
                         display: flex;
                         flex-direction: column;
+                        max-width: 300px;
                         .text {
                             font-size: 14px;
                         }
@@ -191,7 +189,7 @@
                 justify-content: space-around;
 
                 .experience-item{
-                    margin-bottom: 10px;
+                    margin: 10px;
                 }
             }
         }
