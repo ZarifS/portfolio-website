@@ -1,7 +1,7 @@
 @import './variables.scss';
 .work-page {
     min-height: 100vh;
-    .exit-button{
+    .exit-button {
         a:link {
             text-decoration: none;
         }
@@ -51,6 +51,12 @@
         }
         .position-info {
             margin-top: 5vh;
+        }
+        .position-chips {
+            display: flex;
+            margin-top: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
         }
         @media screen and (max-width: 425px) {
             width: auto;

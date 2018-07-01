@@ -1,7 +1,8 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import React, {Component} from 'react'
+import {Link} from 'react-router-dom'
 import IconButton from '@material-ui/core/IconButton';
 import '../styles/workPage.scss'
+import Chip from './chip'
 
 export default class WorkPage extends Component {
     constructor(props) {
@@ -15,7 +16,8 @@ export default class WorkPage extends Component {
             color2: props.item.color2,
             color3: props.item.color3,
             duration: props.item.duration,
-            info: props.item.info
+            info: props.item.info,
+            skills: props.item.skills
         }
     }
     render() {
@@ -26,33 +28,43 @@ export default class WorkPage extends Component {
             color: 'white',
             fontSize: '1.2em'
         };
+        const chips = []
+        this
+            .state
+            .skills
+            .forEach(skill => {
+                chips.push(<Chip value={skill}/>)
+            })
         return (
             <div className='work-page' style={style}>
                 <div className='exit-button'>
                     <Link to='/story/experience'>
                         <IconButton
                             style={{
-                                'marginLeft': '20px',
-                                'marginTop': '20px',
-                                'marginBottom': '10px'
-                            }}>
+                            'marginLeft': '5px',
+                            'marginTop': '5px'
+                        }}>
                             <i className="far fa-times-circle" style={iconStyle}></i>
                         </IconButton>
                     </Link>
                 </div>
                 <div className='work-page-container'>
                     <div className='work-page-header'>
-                        <img src={this.state.logo} className='work-logo' />
-                        <hr />
+                        <img src={this.state.logo} className='work-logo'/>
+                        <hr/>
                     </div>
                     <div className='position'>
                         <div className='title-header'>{this.state.role}</div>
-                        <div className='text-header'><i>{this.state.duration}</i></div>
+                        <div className='text-header'>
+                            <i>{this.state.duration}</i>
+                        </div>
                     </div>
                     <div className='position-info'>
                         <div className='text'>{this.state.info}</div>
                     </div>
-                    <div className='position-chips'></div>
+                    <div className='position-chips'>
+                        {chips}
+                    </div>
                 </div>
             </div>
         )
