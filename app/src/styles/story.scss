@@ -119,7 +119,7 @@
                 height: 100%;
             }
             @media screen and (max-width: 425px) {
-                    padding: 15px;
+                padding: 15px;
             }
         }
         .education {
@@ -190,8 +190,7 @@
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-around;
-
-                .experience-item{
+                .experience-item {
                     margin: 10px;
                 }
             }
@@ -204,14 +203,22 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            .work-title {
-                .work-logo {
-                    height: 100px;
-                    width: 200px;
-                }
+            -webkit-transition: transform 1s;
+            position: relative;
+            /* Safari */
+            transition: transform 1s;
+            .work-logo {
+                height: 100px;
+                width: 200px;
             }
             .work-role {
-                color:white;
+                color: white;
+            }
+            i {
+               position: absolute;
+               bottom: 20px;
+               right: 20px; 
+               color: #ffffff73;
             }
             @media screen and (max-width: 425px) {
                 @include mobileContent;
@@ -221,6 +228,9 @@
                     font-size: 20px;
                 }
             }
+        }
+        .work-card:hover {
+            transform: scale(1.05);
         }
         @media screen and (max-width: 425px) {
             @include mobileContent;

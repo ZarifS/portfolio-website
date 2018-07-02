@@ -1,10 +1,10 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 import IconButton from '@material-ui/core/IconButton';
-import '../styles/workPage.scss'
+import '../styles/jobPage.scss'
 import Chip from './chip'
 
-export default class WorkPage extends Component {
+export default class JobPage extends Component {
     constructor(props) {
         super(props)
         console.log(props)
@@ -36,7 +36,7 @@ export default class WorkPage extends Component {
                 chips.push(<Chip value={skill}/>)
             })
         return (
-            <div className='work-page' style={style}>
+            <div className='job-page' style={style}>
                 <div className='exit-button'>
                     <Link to='/story/experience'>
                         <IconButton
@@ -48,8 +48,8 @@ export default class WorkPage extends Component {
                         </IconButton>
                     </Link>
                 </div>
-                <div className='work-page-container'>
-                    <div className='work-page-header'>
+                <div className='job-page-container'>
+                    <div className='job-page-header'>
                         <img src={this.state.logo} className='work-logo'/>
                         <hr/>
                     </div>

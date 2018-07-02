@@ -34,7 +34,7 @@ class App extends React.Component {
                         <Switch>
                             <Route exact path="/" component={Home} />
                             <Route path="/story" component={StoryPageRouteHandler} />
-                            <Route exact path="/works" component={InDevelopment} />
+                            <Route exact path="/works" component={Works} />
                             <Route exact path="/blog" component={InDevelopment} />
                             <Route exact path="/services" component={InDevelopment} />
                             <Route exact path="/contact" component={InDevelopment} />

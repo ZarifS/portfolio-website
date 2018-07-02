@@ -1,5 +1,5 @@
 @import './variables.scss';
-.work-page {
+.job-page {
     min-height: 100vh;
     .exit-button {
         a:link {
@@ -10,13 +10,13 @@
         }
         position: fixed;
     }
-    .work-page-container {
+    .job-page-container {
         margin-left: auto;
         margin-right: auto;
         width: 80%;
         @include text;
         color: white;
-        .work-page-header {
+        .job-page-header {
             width: 205px;
             img {
                 padding-bottom: 10px;

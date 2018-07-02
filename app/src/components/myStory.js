@@ -1,8 +1,7 @@
 import React, {Component} from 'react'
 import {Route, Link, Switch} from 'react-router-dom'
-import Responsive from 'react-responsive'
-import WorkPage from './workPage'
 import '../styles/story.scss'
+import JobPage from './jobPage'
 import cienaLogo from './../images/logos/ciena.svg'
 import ibmLogo from './../images/logos/ibm.svg'
 import kinaxisLogo from './../images/logos/kinaxis.svg'
@@ -27,7 +26,15 @@ const ciena = {
             't. Working at Ciena opened my eyes to what software development is like in the p' +
             'rivate sector and also equipped me with the skills needed to further my career p' +
             'ath as a software engineer.',
-    skills: ['EmberJS', 'BitBucket', 'Mocha', 'Java', 'Cassandra', 'REST', 'Postman']
+    skills: [
+        'EmberJS',
+        'BitBucket',
+        'Mocha',
+        'Java',
+        'Cassandra',
+        'REST',
+        'Postman'
+    ]
 }
 const canada = {
     title: 'canada',
@@ -87,10 +94,17 @@ const kinaxis = {
             'ASS, Typescript alongside testing suites such as Jasmine. The development was ag' +
             'ile and allowed me to learn many new skills in terms of developing scalable web ' +
             'technologies.',
-    skills: ['AngularJS', 'BitBucket', 'Jasmine', 'Redux', 'NodeJS', 'REST']
+    skills: [
+        'AngularJS',
+        'BitBucket',
+        'Jasmine',
+        'Redux',
+        'NodeJS',
+        'REST'
+    ]
 }
 
-// Check if the route being passed is specifically a workpage if not render the
+// Check if the route being passed is specifically a JobPage if not render the
 // default MyStory component
 export default class StoryPageRouteHandler extends Component {
     constructor(props) {
@@ -102,19 +116,19 @@ export default class StoryPageRouteHandler extends Component {
                 <Route
                     exact
                     path={`/story/experience/agri-food-canada`}
-                    render={() => <WorkPage item={canada}/>}/>
+                    render={() => <JobPage item={canada}/>}/>
                 <Route
                     exact
                     path={`/story/experience/ciena`}
-                    render={() => <WorkPage item={ciena}/>}/>
+                    render={() => <JobPage item={ciena}/>}/>
                 <Route
                     exact
                     path={`/story/experience/kinaxis`}
-                    render={() => <WorkPage item={kinaxis}/>}/>
+                    render={() => <JobPage item={kinaxis}/>}/>
                 <Route
                     exact
                     path={`/story/experience/ibm`}
-                    render={() => <WorkPage item={ibm}/>}/>
+                    render={() => <JobPage item={ibm}/>}/>
                 <Route path={`/story`} component={MyStory}/>
             </Switch>
         )
@@ -163,27 +177,31 @@ export class MyStory extends Component {
                         <div
                             className={this.state.aboutClicked
                             ? 'nav-item active'
-                            : 'nav-item'}
-                            onClick={() => this.handleNavClick('about')}>
-                            <Link to={`${this.props.match.url}`} className='active'>
+                            : 'nav-item'}>
+                            <Link
+                                to={`${this.props.match.url}`}
+                                className='active'
+                                onClick={() => this.handleNavClick('about')}>
                                 <i className="fas fa-book-open"></i>
                             </Link>
                         </div>
                         <div
                             className={this.state.educationClicked
                             ? 'nav-item active'
-                            : 'nav-item'}
-                            onClick={() => this.handleNavClick('education')}>
-                            <Link to={`${this.props.match.url}/education`}>
+                            : 'nav-item'}>
+                            <Link
+                                to={`${this.props.match.url}/education`}
+                                onClick={() => this.handleNavClick('education')}>
                                 <i className="fas fa-graduation-cap"></i>
                             </Link>
                         </div>
                         <div
                             className={this.state.experienceClicked
                             ? 'nav-item active'
-                            : 'nav-item'}
-                            onClick={() => this.handleNavClick('experience')}>
-                            <Link to={`${this.props.match.url}/experience`}>
+                            : 'nav-item'}>
+                            <Link
+                                to={`${this.props.match.url}/experience`}
+                                onClick={() => this.handleNavClick('experience')}>
                                 <i className="fas fa-briefcase"></i>
                             </Link>
                         </div>
@@ -200,7 +218,7 @@ export class MyStory extends Component {
                         <Route
                             exact
                             path={`${this.props.match.path}/experience/ciena`}
-                            render={() => <WorkPage item={ciena}/>}/>
+                            render={() => <JobPage item={ciena}/>}/>
                     </Switch>
                 </div>
             </div>
@@ -223,17 +241,16 @@ class About extends Component {
                 <div className='text'>
                     As a consultant and web architect, my goal is to help businesses and individuals
                     create a professional online image for themselves, something that will pay
-                    dividends for years to come. Having worked in the public sector, as a Software
-                    Analyst and Developer, and in the private sector, as a Software Developer
-                    (Ciena), Web and Applications Engineer (Kinaxis), and a Software Engineer (IBM),
+                    dividends for years to come. Having worked in the public sector and in the private sector, as a Full Stack Developer
+                    (Agri-Food Canada and Ciena), Front End Engineer (Kinaxis), and a Back End Engineer (IBM),
                     I've gained a technical and theoretical skill set which allows me to consult
-                    others by understanding their current positions, while simultaneously offering
+                    others by understanding their current positions and goals. Throuhg these skills I can offer
                     advanced, holistic, and relevant solutions. Developing an image for yourself and
                     your work is never easy, but with help it can be.
                 </div>
                 <br/>
                 <div className='text'>Now you now know a bit about me, but I am still eager to
-                    get to know you. Feel free to contact me as I love to meet interesting folk and
+                    get to know you. Feel free to contact me as I love to meet interesting people and
                     if you are someone who might be able to benefit from my services I encourage you
                     to reach out.
                 </div>
@@ -361,9 +378,8 @@ class WorkCard extends Component {
         }
         return (
             <div className='work-card' style={style}>
-                <div className='work-title'>
-                    <img src={this.state.logo} className='work-logo'/>
-                </div>
+                <img src={this.state.logo} className='work-logo'/>
+                <i className='fas fa-arrow-right '></i>
             </div>
         )
     }
