@@ -244,7 +244,7 @@ class About extends Component {
                     dividends for years to come. Having worked in the public sector and in the private sector, as a Full Stack Developer
                     (Agri-Food Canada and Ciena), Front End Engineer (Kinaxis), and a Back End Engineer (IBM),
                     I've gained a technical and theoretical skill set which allows me to consult
-                    others by understanding their current positions and goals. Throuhg these skills I can offer
+                    others by understanding their current positions and goals. Through these skills I can offer
                     advanced, holistic, and relevant solutions. Developing an image for yourself and
                     your work is never easy, but with help it can be.
                 </div>

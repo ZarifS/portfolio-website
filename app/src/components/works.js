@@ -1,47 +1,7 @@
 import React, {Component} from 'react'
+import WorkPage from './workPage'
+import {Route, Link, Switch} from 'react-router-dom'
 import '../styles/works.scss'
-class Works extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {};
-    }
-    render() {
-        return (
-            <div className='works-page'>
-                <div className='works-header'>
-                    <div className='title-header'>
-                        Works
-                        <hr/>
-                    </div>
-                </div>
-                <div className='works-content'>
-                    <div className='projects'>
-                        <div className='project-header'>
-                            Software Projects
-                            <hr/>
-                        </div>
-                        <div className='project-container'>
-                            <ProjectCard item={Munchies}/>
-                            <ProjectCard item={Habitual}/>
-                            <ProjectCard item={Graded}/>
-                            <ProjectCard item={Website}/>
-                        </div>
-                    </div>
-                    <div className='projects'>
-                        <div className='project-header'>
-                            Research Papers
-                            <hr/>
-                        </div>
-                        <div className='project-container'>
-                            <ResearchCard item={BlockChainPaper}/>
-                            <ResearchCard item={BlockChainPaper}/>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        );
-    }
-}
 
 const Munchies = {
     title: 'Munchies',
@@ -81,11 +41,85 @@ const BlockChainPaper = {
     color: 'd4c447'
 }
 
+export default class WorksRouteHandler extends Component {
+    constructor(props) {
+        super(props)
+    }
+    render() {
+        return (
+            <Switch>
+                <Route
+                    exact
+                    path={`/works/habitual`}
+                    render=
+                    {
+                        () => <WorkPage item={Habitual}/>
+                    }/>
+                <Route exact path={`/works/graded`} render={() => <WorkPage item={Graded}/>}/>
+                <Route
+                    exact
+                    path={`/works/munchies`}
+                    render={() => <WorkPage item={Munchies}/>}/>
+                <Route exact path={`/works/website`} render={() => <WorkPage item={Website}/>}/>
+                <Route path={`/works`} component={Works}/>
+            </Switch>
+        )
+    }
+}
+
+class Works extends Component {
+    constructor(props) {
+        super(props);
+    }
+    render() {
+        return (
+            <div className='works-page'>
+                <div className='works-header'>
+                    <div className='title-header'>
+                        Works
+                        <hr/>
+                    </div>
+                </div>
+                <div className='works-content'>
+                    <div className='projects'>
+                        <div className='project-header'>
+                            Software Projects
+                            <hr/>
+                        </div>
+                        <div className='project-container'>
+                            <Link to={`${this.props.match.url}` + '/munchies'}>
+                                <ProjectCard item={Munchies}/>
+                            </Link>
+                            <Link to={`${this.props.match.url}` + '/habitual'}>
+                                <ProjectCard item={Habitual}/>
+                            </Link>
+                            <Link to={`${this.props.match.url}` + '/graded'}>
+                                <ProjectCard item={Graded}/>
+                            </Link>
+                            <Link to={`${this.props.match.url}` + '/website'}>
+                                <ProjectCard item={Website}/>
+                            </Link>
+                        </div>
+                    </div>
+                    <div className='projects'>
+                        <div className='project-header'>
+                            Research Papers
+                            <hr/>
+                        </div>
+                        <div className='project-container'>
+                            <ResearchCard item={BlockChainPaper}/>
+                            <ResearchCard item={BlockChainPaper}/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+}
 
 class ProjectCard extends Component {
     constructor(props) {
         super(props)
-        console.log(props)
         this.state = {
             title: props.item.title,
             tech: props.item.tech,
@@ -130,5 +164,3 @@ class ResearchCard extends Component {
         )
     }
 }
-
-export default Works
