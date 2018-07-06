@@ -1,0 +1,130 @@
+@import './variables.scss';
+.workpage-page {
+    min-height: 100vh;
+    .exit-button {
+        a:link {
+            text-decoration: none;
+        }
+        a:visited {
+            text-decoration: none;
+        }
+        position: fixed;
+    }
+    .workpage-content {
+        @include text;
+        color: white;
+        .center {
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+        }
+        .workpage-header {
+            display: inline-block;
+            .work-logo {
+                padding-bottom: 10px;
+                padding-top: 30px;
+                font-size: 35px;
+                text-transform: uppercase;
+            }
+            hr {
+                height: 3px;
+                background: white;
+                border: none;
+                margin-left: 5px;
+                margin-top: -10px;
+                margin-right: 0;
+            }
+        }
+        .workpage-intro {
+            display: flex;
+            padding-bottom: 50px;
+            justify-content: center;
+            .workpage-intro-info {
+                width: 400px;
+                min-width: 300px;
+                margin-right: 20px;
+            }
+            img {
+                height: 300px;
+                padding-bottom: 20px;
+            }
+            @media screen and (max-width: 475px) {
+                .workpage-intro-info {
+                    width: 350px;
+                }
+                img {
+                    height: 200px !important;
+                }
+            }
+            @media screen and (max-width: 625px) {
+                img {
+                    height: 250px;
+                }
+            }
+            @media screen and (max-width: 915px) {
+                flex-wrap: wrap-reverse;
+                justify-content: center;
+            }
+            @media screen and (max-width: 1120px) and (min-width: 920px) {
+                img {
+                    height: 250px !important;
+                }
+            }
+            @media screen and (min-width: 1300px) {
+                .workpage-intro-info {
+                    width: 500px;
+                }
+            }
+        }
+        .workpage-body {
+            display: flex;
+            align-items: center;
+            padding-bottom: 50px;
+            .workpage-body-info {
+                width: 400px;
+                min-width: 300px;
+            }
+            img {
+                height: 400px;
+                padding-bottom: 20px;
+                margin-right: 20px;
+
+            }
+            @media screen and (max-width: 475px) {
+                .workpage-body-info {
+                    width: 350px;
+                }
+                img {
+                    height: 250px !important;
+                }
+            }
+            @media screen and (max-width: 625px) {
+                img {
+                    height: 350px;
+                }
+            }
+            @media screen and (max-width: 1200px) {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            @media screen and (min-width: 1300px) {
+                .workpage-body-info {
+                    width: 500px;
+                }
+                img {
+                    height: 450px;
+                }
+            }
+            @media screen and (min-width: 1500px) {
+                img {
+                    height: 520px;
+                }
+            }
+        }
+        @media screen and (max-width: 475px) {
+            width: auto;
+            padding-left: 10px;
+        }
+        @media screen and (min-width: 1400px) {}
+    }
+}

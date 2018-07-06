@@ -2,13 +2,16 @@ import React, {Component} from 'react'
 import WorkPage from './workPage'
 import {Route, Link, Switch} from 'react-router-dom'
 import '../styles/works.scss'
-
+import MunchiesMain from './../images/munchies/munchies-Macbook.png'
+import MunchiesStacked from './../images/munchies/munchies-stacked.png'
 const Munchies = {
     title: 'Munchies',
     tech: 'React | Python',
     color1: '0bf9aa',
     color2: '19b78b',
-    color3: '3cd291'
+    color3: '3cd291',
+    picture1: MunchiesMain,
+    picture2: MunchiesStacked
 }
 
 const Habitual = {
