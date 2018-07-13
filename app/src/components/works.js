@@ -2,47 +2,7 @@ import React, {Component} from 'react'
 import WorkPage from './workPage'
 import {Route, Link, Switch} from 'react-router-dom'
 import '../styles/works.scss'
-import MunchiesMain from './../images/munchies/munchies-Macbook.png'
-import MunchiesStacked from './../images/munchies/munchies-stacked.png'
-const Munchies = {
-    title: 'Munchies',
-    tech: 'React | Python',
-    color1: '0bf9aa',
-    color2: '19b78b',
-    color3: '3cd291',
-    picture1: MunchiesMain,
-    picture2: MunchiesStacked
-}
-
-const Habitual = {
-    title: 'Habitual',
-    tech: 'Android | Realm',
-    color1: '535b53',
-    color2: '4f554f',
-    color3: '393939'
-}
-
-const Graded = {
-    title: 'Graded',
-    tech: 'Android | Realm',
-    color1: '4dcdee',
-    color2: '2596d9',
-    color3: '168fdd'
-}
-
-const Website = {
-    title: 'Portfolio Site',
-    tech: 'React',
-    color1: 'ba49c8',
-    color2: 'ac54e6',
-    color3: '8112e3'
-}
-
-const BlockChainPaper = {
-    title: 'The Implications of Blockchain Technologies',
-    date: '2018',
-    color: 'd4c447'
-}
+import {Munchies, Habitual, Graded, Website, BlockChainPaper} from './constants'
 
 export default class WorksRouteHandler extends Component {
     constructor(props) {
