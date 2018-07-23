@@ -48,13 +48,13 @@ export default class SidePanel extends React.Component {
                         </Link>
                     </div>
                     <div className='nav-item'>
-                        <Link to='/blog'>
-                            Blog
+                        <Link to='/services'>
+                            Services
                         </Link>
                     </div>
                     <div className='nav-item'>
-                        <Link to='/services'>
-                            Services
+                        <Link to='/blog'>
+                            Blog
                         </Link>
                     </div>
                 </div>

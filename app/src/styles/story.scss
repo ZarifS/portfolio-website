@@ -1,11 +1,13 @@
 @import './variables.scss';
 .story-container {
     color: white;
-    background: -webkit-gradient( linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.9))), url('../images/backgrounds/car-trail-blurred.jpeg');
-    background: -webkit-linear-gradient( top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url('../images/backgrounds/car-trail-blurred.jpeg');
-    background: -o-linear-gradient( top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url('../images/backgrounds/car-trail-blurred.jpeg');
-    background: linear-gradient( to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url('../images/backgrounds/car-trail-blurred.jpeg');
-    background-size: cover;
+    // background: -webkit-gradient( linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.9))), url('../images/backgrounds/car-trail-blurred.jpeg');
+    // background: -webkit-linear-gradient( top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url('../images/backgrounds/car-trail-blurred.jpeg');
+    // background: -o-linear-gradient( top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url('../images/backgrounds/car-trail-blurred.jpeg');
+    // background: linear-gradient( to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url('../images/backgrounds/car-trail-blurred.jpeg');
+    // background-size: cover;
+    background: linear-gradient(to bottom left, #6265da, #7e28ab, #654a73);
+    // background: linear-gradient(to bottom left, #857fe4, #79399a, #564856);
     height: 100%;
     .story-navigation {
         padding-top: 20px;
@@ -16,7 +18,8 @@
             hr {
                 height: .20rem;
                 width: 4.5em;
-                background: mediumpurple;
+                // background: mediumpurple;
+                background: white;
                 border: none;
                 margin-left: auto;
                 margin-right: auto;
@@ -56,7 +59,8 @@
                     left: 0;
                     height: 3px;
                     width: 100%;
-                    background-color: mediumpurple;
+                    // background-color: mediumpurple;
+                    background-color: white;
                     transform-origin: right top;
                     transform: scale(0, 1);
                     transition: color 0.1s, transform 0.2s ease-out;
@@ -69,7 +73,8 @@
             }
             .active {
                 a::before {
-                    background-color: mediumpurple;
+                    // background-color: mediumpurple;
+                    background-color: white;
                     transform: scale(1, 1);
                 }
             }
@@ -96,7 +101,7 @@
         }
         .text {
             @include text;
-            font-size: 16px;
+            font-size: 15px;
             text-align: left;
         }
         .about {
@@ -203,6 +208,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
             -webkit-transition: transform 1s;
             position: relative;
             /* Safari */

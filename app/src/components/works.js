@@ -45,7 +45,7 @@ class Works extends Component {
                 </div>
                 <div className='works-content'>
                     <div className='projects'>
-                        <div className='project-header'>
+                        <div className='text-header'>
                             Software Projects
                             <hr/>
                         </div>
@@ -65,7 +65,7 @@ class Works extends Component {
                         </div>
                     </div>
                     <div className='projects'>
-                        <div className='project-header'>
+                        <div className='text-header'>
                             Research Papers
                             <hr/>
                         </div>
@@ -107,7 +107,6 @@ class ProjectCard extends Component {
 class ResearchCard extends Component {
     constructor(props) {
         super(props)
-        console.log(props)
         this.state = {
             title: props.item.title,
             date: props.item.date,

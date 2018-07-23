@@ -7,7 +7,6 @@ import Chip from './chip'
 export default class JobPage extends Component {
     constructor(props) {
         super(props)
-        console.log(props)
         this.state = {
             title: props.item.title,
             role: props.item.role,

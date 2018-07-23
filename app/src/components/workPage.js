@@ -2,7 +2,6 @@ import React, {Component} from 'react'
 import '../styles/workPage.scss'
 import {Link} from 'react-router-dom'
 import IconButton from '@material-ui/core/IconButton';
-import {platform} from 'os';
 
 const iconStyle = {
     color: 'white',
@@ -139,7 +138,6 @@ class Footer extends Component {
     render() {
         let platforms = this.props.platforms
         var logos = platforms.map((platform) => {
-            console.log(platform)
             if (platform === 'github') {
                 return <GitHubLogo link={this.props.links.github}/>
             } else if (platform === 'android') {

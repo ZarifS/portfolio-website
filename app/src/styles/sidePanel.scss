@@ -1,7 +1,7 @@
 @import './_variables';
 
 @mixin headerResponsive {
-    @include text;
+    @include text-header;
     color: white;
     text-align: center;
     text-transform: uppercase;

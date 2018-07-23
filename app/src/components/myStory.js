@@ -263,7 +263,6 @@ class Experience extends Component {
 class WorkCard extends Component {
     constructor(props) {
         super(props)
-        console.log(props)
         this.state = {
             title: props.item.title,
             role: props.item.role,
