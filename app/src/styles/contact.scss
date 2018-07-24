@@ -1,0 +1,88 @@
+@import './variables.scss';
+.contact-page {
+    width: 100%;
+    color: white;
+    min-height: 100vh;
+    background: linear-gradient(to bottom left, #32a3ce, #813ade, #8e15da);
+    .contact-header {
+        padding-top: 20px;
+        .title-header {
+            @include header;
+            font-size: 35px;
+            text-align: center;
+            hr {
+                height: .20rem;
+                width: 4.5em;
+                background: white;
+                border: none;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 0.2rem;
+            }
+        }
+        @media screen and (max-width: 425px) {
+            @include mobileContent;
+        }
+        @media screen and (min-width: 1400px) {
+            @include desktopContent;
+        }
+    }
+    .contact-content {
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        @include text;
+        .contact-info {
+            padding: 10px;
+        }
+        .contact-form {
+            color: grey;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+            form {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                /* Style inputs with type="text", select elements and textareas */
+                input[type=text],
+                input[type=email],
+                select,
+                textarea {
+                    width: 100%;
+                    /* Full width */
+                    padding: 12px;
+                    /* Some padding */
+                    border: 1px solid #ccc;
+                    /* Gray border */
+                    border-radius: 4px;
+                    /* Rounded borders */
+                    box-sizing: border-box;
+                    /* Make sure that padding and width stays in place */
+                    margin-top: 6px;
+                    /* Add a top margin */
+                    margin-bottom: 16px;
+                    /* Bottom margin */
+                    resize: vertical/* Allow the user to vertically resize the textarea (not horizontally) */
+                }
+                /* Style the submit button with a specific background color etc */
+                input[type=submit] {
+                    background-color: mediumorchid;
+                    color: white;
+                    padding: 12px 20px;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    text-align: center;
+                }
+                /* When moving the mouse over the submit button, add a darker green color */
+                input[type=submit]:hover {
+                    background-color: mediumpurple;
+                }
+            }
+        }
+    }
+}

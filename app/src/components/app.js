@@ -10,6 +10,7 @@ import Home from './home'
 import WorksRouteHandler from './works'
 import InDevelopment from './inDevelopment'
 import Services from './services'
+import Contact from './contact'
 
 const Desktop = props => <Responsive {...props} minWidth={992} />
 const Tablet = props => <Responsive {...props} maxWidth={991} />
@@ -38,7 +39,7 @@ class App extends React.Component {
                             <Route path="/works" component={WorksRouteHandler} />
                             <Route path="/blog" component={InDevelopment} />
                             <Route exact path="/services" component={Services} />
-                            <Route exact path="/contact" component={InDevelopment} />
+                            <Route exact path="/contact" component={Contact} />
                         </Switch>
                     </div>
                     <Desktop>
