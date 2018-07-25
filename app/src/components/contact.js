@@ -8,13 +8,36 @@ import Grid from '@material-ui/core/Grid';
 export default class Contact extends Component {
     constructor(props) {
         super(props)
-
         this.state = {
             'name': '',
             'email': '',
             'message': '',
             'validEmail': false
         }
+    }
+
+    componentDidMount() {
+        var name = document.getElementById('name');
+        var email = document.getElementById('email');
+        var message = document.getElementById('message');
+        name.addEventListener('keypress', function (event) {
+            if (event.keyCode == 13) {
+                event.preventDefault();
+            }
+        })
+        message.addEventListener('keypress', function (event) {
+            if (event.keyCode == 13) {
+                event.preventDefault();
+                var s = message.value
+                console.log(s)
+                document.getElementById('message').value = s + '\n'
+            }
+        })
+        email.addEventListener('keypress', function (event) {
+            if (event.keyCode == 13) {
+                event.preventDefault();
+            }
+        })
     }
 
     render() {
@@ -35,13 +58,13 @@ export default class Contact extends Component {
                         with me, feel free to send me an invitation through LinkedIn.</div>
                     <div className='contact-form'>
                         <form action="https://formspree.io/zarif.shahriar@hotmail.com" method="POST">
-                            <label for="name">Name</label>
-                            <input type="text" name="name" placeholder="John Doe"/>
-                            <label for="email">Email</label>
-                            <input type="email" name="email" placeholder="john.doe@email.com"/>
-                            <label for="message">Message</label>
-                            <input type="text" name="message" placeholder="Hey! Lets talk!"/>
-                            <input type="hidden" name="_subject" value="Website Contact"/>
+                            <label htmlFor="name">Name</label>
+                            <input type="text" name="name" id='name' placeholder="John Doe"/>
+                            <label htmlFor="email">Email</label>
+                            <input type="email" name="email" id='email' placeholder="john.doe@email.com"/>
+                            <label htmlFor="message">Message</label>
+                            <textarea type="text" name="message" id='message' placeholder="Hey! Lets talk!"></textarea>
+                            <input type="hidden" name="_subject" value="Website Contact"/> {/* <input type="submit" name="submit" value="Submit"/> */}
                             <input type="submit" name="submit" value="Submit"/>
                         </form>
                     </div>

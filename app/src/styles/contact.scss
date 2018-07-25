@@ -36,6 +36,7 @@
         @include text;
         .contact-info {
             padding: 10px;
+            padding-bottom: 30px;
         }
         .contact-form {
             color: grey;
@@ -52,7 +53,7 @@
                 input[type=email],
                 select,
                 textarea {
-                    width: 100%;
+                    width: 80%;
                     /* Full width */
                     padding: 12px;
                     /* Some padding */
