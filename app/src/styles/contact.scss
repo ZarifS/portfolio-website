@@ -35,15 +35,21 @@
         width: 80%;
         @include text;
         padding-bottom: 20px;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
         .contact-info {
             padding: 10px;
             padding-bottom: 30px;
+            max-width: 500px;
         }
         .contact-form {
             color: grey;
             border-radius: 5px;
             background-color: #f2f2f2;
             padding: 20px;
+            width: 50%;
+            min-width: 300px;
             form {
                 display: flex;
                 flex-direction: column;
@@ -85,6 +91,15 @@
                     background-color: mediumpurple;
                 }
             }
+        }
+        @media screen and (max-width: 425px) {
+            @include mobileContent;
+            .contact-form {
+                padding: 5px;
+            }
+        }
+        @media screen and (min-width: 1400px) {
+            @include desktopContent;
         }
     }
 }

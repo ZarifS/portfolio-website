@@ -30,7 +30,9 @@ export default class Contact extends Component {
                 event.preventDefault();
                 var s = message.value
                 console.log(s)
-                document.getElementById('message').value = s + '\n'
+                document
+                    .getElementById('message')
+                    .value = s + '\n'
             }
         })
         email.addEventListener('keypress', function (event) {
@@ -50,12 +52,15 @@ export default class Contact extends Component {
                     </div>
                 </div>
                 <div className='contact-content'>
-                    <div className='contact-info'>
+                    <div className='contact-info text'>
                         Speaking with other developers, designers, entrepreneurs and people in general
                         is always refreshing. Contact me through this form if you have any
-                        recomendations, critiques or if you just want to say hello. If you are
-                        interested in my work, it is all posted on Github and if you wish to connect
-                        with me, feel free to send me an invitation through LinkedIn.</div>
+                        recomendations, critiques or if you just want to say hello.
+                        <br/>
+                        <br/>If you are interested in my work, it is all posted on Github and if you
+                            wish to connect with me, feel free to send me an invitation through LinkedIn. If
+                            you are interested in working together or in the services I offer, please send me a
+                            message as I would love to get in touch with you.</div>
                     <div className='contact-form'>
                         <form action="https://formspree.io/zarif.shahriar@hotmail.com" method="POST">
                             <label htmlFor="name">Name</label>
