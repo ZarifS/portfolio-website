@@ -20,6 +20,10 @@ export default class WorkPage extends Component {
             picture1: props.item.picture1,
             picture2: props.item.picture2,
             pictureClass: props.item.pictureClass,
+            info1: props.item.info1,
+            info2: props.item.info2,
+            info3: props.item.info3,
+            info4: props.item.info4
         }
     }
     render() {
@@ -29,7 +33,7 @@ export default class WorkPage extends Component {
         let props = {
             platforms: this.props.item.platforms,
             links: this.props.item.links
-            }
+        }
         return (
             <div className='workpage-page' style={style}>
                 <div className='exit-button'>
@@ -52,32 +56,19 @@ export default class WorkPage extends Component {
                     </div>
                     <div className='workpage-intro'>
                         <div className='workpage-intro-info text'>
-                            Ea excepteur pariatur laborum officia deserunt. Do nostrud reprehenderit nostrud
-                            et mollit culpa nulla ut ut aute in ut eu. Cillum ex eu eu non incididunt
-                            excepteur. Duis veniam aute tempor aliquip consequat est. In cillum occaecat do
-                            cillum ipsum. Duis est est nisi proident.
+                            {this.state.info1}
                             <br/>
-                            <br/>
-                            Ea excepteur pariatur laborum officia deserunt. Do nostrud reprehenderit nostrud
-                            et mollit culpa nulla ut ut aute in ut eu. Cillum ex eu eu non incididunt
-                            excepteur. Duis veniam aute tempor aliquip consequat est. In cillum occaecat do
-                            cillum ipsum. Duis est est nisi proident.
+                            <br/> {this.state.info2}
                         </div>
                         <img className={this.state.pictureClass} src={this.state.picture1}/>
                     </div>
                     <div className='workpage-body'>
                         <img className={this.state.pictureClass} src={this.state.picture2}/>
                         <div className='workpage-body-info text'>
-                            Ea excepteur pariatur laborum officia deserunt. Do nostrud reprehenderit nostrud
-                            et mollit culpa nulla ut ut aute in ut eu. Cillum ex eu eu non incididunt
-                            excepteur. Duis veniam aute tempor aliquip consequat est. In cillum occaecat do
-                            cillum ipsum. Duis est est nisi proident.
+                            {this.state.info3}
                             <br/>
                             <br/>
-                            Ea excepteur pariatur laborum officia deserunt. Do nostrud reprehenderit nostrud
-                            et mollit culpa nulla ut ut aute in ut eu. Cillum ex eu eu non incididunt
-                            excepteur. Duis veniam aute tempor aliquip consequat est. In cillum occaecat do
-                            cillum ipsum. Duis est est nisi proident.
+                            {this.state.info4}
                         </div>
                     </div>
                     <div className='workpage-footer'>

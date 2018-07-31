@@ -121,7 +121,21 @@ export const Munchies = {
     platforms: ['github'],
     links: {
         'github': 'https://github.com/ZarifS/munchies-react'
-    }
+    },
+    info1: 'Munchies is a web application designed for my database design course which allow' +
+            's users to view the ratings and menus of restaurants. Because the application wa' +
+            's to be designed in the scope of the course the database was populated with rest' +
+            'aurants locally.',
+    info2: 'The website was designed by focusing on finding what users want to eat fast and ' +
+            'in a beautiful way. Once the user searches for a type of food or restaurant the ' +
+            'website will bring them to a restaurant page that shows all the relevant informa' +
+            'tion including the menu.',
+    info3: 'The site offers a admin page that allows adding and editing restaurants as well ' +
+            'as engaging in advanced SQL queries to bring back specific data (related to proj' +
+            'ect requirements rather than functionality).',
+    info4: 'The site was designed using React for the front end client and Python with the F' +
+            'lask framework for the backend API. The database used was PostgreSQL which allow' +
+            'ed us to execute SQL queries for a wide variety of specifications. '
 }
 
 export const Habitual = {
@@ -133,11 +147,30 @@ export const Habitual = {
     picture1: HabitualMain,
     picture2: HabitualStacked,
     pictureClass: 'mobile',
-    platforms: ['github', 'android'],
+    platforms: [
+        'github', 'android'
+    ],
     links: {
         'github': 'https://github.com/ZarifS/habitual-android',
         'android': 'https://play.google.com/store/apps/details?id=com.accentsoftware.habitual'
-    }
+    },
+    info1: 'Habitual is a android application designed to help people develop good habits an' +
+            'd stick with them. The application was designed to create a simple and beautiful' +
+            ' interface that helps users set up and track habits very quickly. ',
+    info2: 'Developing a good habit takes 30 days and the app leverages this by allowing use' +
+            'rs to streak their habits on a weekly basis and work towards getting the gold ba' +
+            'dge. By the time the badge arrives the habit would have been developed. The goal' +
+            ' of the app is to make building great habits as quick and easy as possible but t' +
+            'here is still many things that I wish to add to it',
+    info3: 'The design process involved figuring out how users interacted with mobile applic' +
+            'ations and designing something that will take advantage of the mobile interface.' +
+            ' The first designs for the application involved a large and complicated interfac' +
+            'e which did not resonate well with users. Similar to other apps I tried doing to' +
+            'o much with the mobile interface and decided to pivot to a simple streaking appl' +
+            'ication with continuous feedback from testers.',
+    info4: 'The application was developed using Android Studio using the Java language for l' +
+            'ogic and functionality and XML for design and interface. Realm mobile database w' +
+            'as used for managing the database and user data.'
 }
 
 export const Graded = {
@@ -149,11 +182,32 @@ export const Graded = {
     picture1: GradedMain,
     picture2: GradedStacked,
     pictureClass: 'mobile',
-    platforms: ['github', 'android'],
+    platforms: [
+        'github', 'android'
+    ],
     links: {
         'github': 'https://github.com/ZarifS/graded-android',
         'android': 'https://play.google.com/store/apps/details?id=tempo.graded&hl=en'
-    }
+    },
+    info1: 'Graded is a android application designed to help students keep track of their gr' +
+            'ades throughout the semester. It was designed with the user experience in mind a' +
+            'nd because of this the app was kept very simple and user friendly. The applicati' +
+            'on was the final project of my User Experience course and allowed my partner and' +
+            ' I to do user research on fellow students, mock up designs and finally code the ' +
+            'app in Android Studio. ',
+    info2: 'As university students the most important aspect of our lives often revolve arou' +
+            'nd making sure our studies and grades are kept up. Often times because of the ma' +
+            'ny different deliverables and items each course offers it becomes difficult to m' +
+            'anage what needs to be done and gauge how one is really doing in each course.',
+    info3: 'With this app the user will be able to track their progress and make sure they s' +
+            'tay up to date with each course and see their current mark at a glance. In order' +
+            ' to make things simple we decided to streamline the process of adding items for ' +
+            'each course and give a course hub where the user can see all their current cours' +
+            'es and their current grade based on the items they have delivered so far.',
+    info4: 'The application was developed using Android Studio using the Java language for l' +
+            'ogic and functionality and XML for design and interface. Realm mobile database w' +
+            'as used for managing the database and user data.'
+
 }
 
 export const Website = {
@@ -174,4 +228,10 @@ export const BlockChainPaper = {
     title: 'The Implications of Blockchain Technologies',
     date: '2018',
     color: 'd4c447'
+}
+
+export const CloudComputingPaper = {
+    title: 'The Benefits of Cloud Computing For File Management',
+    date: '2016',
+    color: '6490e4'
 }

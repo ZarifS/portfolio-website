@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import WorkPage from './workPage'
 import {Route, Link, Switch} from 'react-router-dom'
 import '../styles/works.scss'
-import {Munchies, Habitual, Graded, Website, BlockChainPaper} from './constants'
+import {Munchies, Habitual, Graded, Website, BlockChainPaper, CloudComputingPaper} from './constants'
 
 export default class WorksRouteHandler extends Component {
     constructor(props) {
@@ -15,9 +15,7 @@ export default class WorksRouteHandler extends Component {
                     exact
                     path={`/works/habitual`}
                     render=
-                    {
-                        () => <WorkPage item={Habitual}/>
-                    }/>
+                    { () => <WorkPage item={Habitual}/> }/>
                 <Route exact path={`/works/graded`} render={() => <WorkPage item={Graded}/>}/>
                 <Route
                     exact
@@ -59,9 +57,6 @@ class Works extends Component {
                             <Link to={`${this.props.match.url}` + '/graded'}>
                                 <ProjectCard item={Graded}/>
                             </Link>
-                            <Link to={`${this.props.match.url}` + '/website'}>
-                                <ProjectCard item={Website}/>
-                            </Link>
                         </div>
                     </div>
                     <div className='projects'>
@@ -70,8 +65,12 @@ class Works extends Component {
                             <hr/>
                         </div>
                         <div className='project-container'>
-                            <ResearchCard item={BlockChainPaper}/>
-                            <ResearchCard item={BlockChainPaper}/>
+                            <a href={require('../documents/Implications_Blockchain.pdf')} target="_blank">
+                                <ResearchCard item={BlockChainPaper}/>
+                            </a>
+                            <a href={require('../documents/Cloud_Computing.pdf')} target="_blank">
+                                <ResearchCard item={CloudComputingPaper}/>
+                            </a>
                         </div>
                     </div>
                 </div>
