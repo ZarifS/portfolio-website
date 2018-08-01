@@ -3,8 +3,14 @@ import {Route, Link, Switch} from 'react-router-dom'
 import '../styles/story.scss'
 import {ciena, canada, kinaxis, ibm} from './constants'
 import JobPage from './jobPage'
+import Instafeed from 'react-instafeed'
+import Responsive from 'react-responsive'
+const Desktop = props => <Responsive {...props} minWidth={1291}/>
+const Tablet = props => <Responsive {...props} maxWidth={1290} minWidth={801}/>
+const Mobile = props => <Responsive {...props} maxWidth={800}/>
 
-// Check if the route being passed is specifically a JobPage if not render then default MyStory component
+// Check if the route being passed is specifically a JobPage if not render then
+// default MyStory component
 export default class StoryPageRouteHandler extends Component {
     constructor(props) {
         super(props)
@@ -126,35 +132,84 @@ export class MyStory extends Component {
 }
 
 class About extends Component {
+    shouldComponentUpdate(nextProps, nextState) {
+        return false;
+    }
     render() {
         return (
-            <div className='about'>
-                <div className='story-header'>A Developer At Heart.</div>
-                <div className='text'>My goal is to help individuals and companies with their
-                    software needs, be it the user experience on their website, the design of their
-                    applications or consulting on their online persona. In the modern age, too many
-                    businesses suffer from a poor online persona, be it their websites or lack
-                    thereof.
+            <div>
+                <div className='about'>
+                    <div className='story-header'>A Developer At Heart.</div>
+                    <div className='text'>My goal is to help individuals and companies with their
+                        software needs, be it the user experience on their website, the design of their
+                        applications or consulting on their online persona. In the modern age, too many
+                        businesses suffer from a poor online persona, be it their websites or lack
+                        thereof.
+                    </div>
+                    <br/>
+                    <div className='text'>
+                        As a consultant and web architect, my goal is to help businesses and individuals
+                        create a professional online image for themselves, something that will pay
+                        dividends for years to come. Having worked in the public sector and in the
+                        private sector, as a Full Stack Developer (Agri-Food Canada and Ciena), Front
+                        End Engineer (Kinaxis), and a Back End Engineer (IBM), I've gained a technical
+                        and theoretical skill set which allows me to consult others by understanding
+                        their current positions and goals. Through these skills I can offer advanced,
+                        holistic, and relevant solutions. Developing an image for yourself and your work
+                        is never easy, but with help it can be.
+                    </div>
+                    <br/>
+                    <div className='text'>Now you now know a bit about me, but I am still eager to
+                        get to know you. Feel free to contact me as I love to meet interesting people
+                        and if you are someone who might be able to benefit from my services I encourage
+                        you to reach out.
+                    </div>
+                    <br/>
                 </div>
-                <br/>
-                <div className='text'>
-                    As a consultant and web architect, my goal is to help businesses and individuals
-                    create a professional online image for themselves, something that will pay
-                    dividends for years to come. Having worked in the public sector and in the private sector, as a Full Stack Developer
-                    (Agri-Food Canada and Ciena), Front End Engineer (Kinaxis), and a Back End Engineer (IBM),
-                    I've gained a technical and theoretical skill set which allows me to consult
-                    others by understanding their current positions and goals. Through these skills I can offer
-                    advanced, holistic, and relevant solutions. Developing an image for yourself and
-                    your work is never easy, but with help it can be.
-                </div>
-                <br/>
-                <div className='text'>Now you now know a bit about me, but I am still eager to
-                    get to know you. Feel free to contact me as I love to meet interesting people and
-                    if you are someone who might be able to benefit from my services I encourage you
-                    to reach out.
-                </div>
-                <br/>
+                <Tablet>
+                    <div className='instafeed' id='instafeed-tablet'>
+                        <Instafeed
+                            limit='6'
+                            ref='instafeed'
+                            resolution='thumbnail'
+                            sortBy='most-recent'
+                            target='instafeed-tablet'
+                            template='<a class="instafeed" target="_blank" href="{{link}}"><img class="instafeed-pic" src="{{image}}" /></a>'
+                            userId='27672003'
+                            clientId='5ba6a992b3d6425b89cbd2985f052381'
+                            accessToken='27672003.5ba6a99.d64a7b98c12f493d8b8ae98e337f05bf'/>
+                    </div>
+                </Tablet>
+                <Desktop>
+                    <div className='instafeed' id='instafeed'>
+                        <Instafeed
+                            limit='10'
+                            ref='instafeed'
+                            resolution='thumbnail'
+                            sortBy='most-recent'
+                            target='instafeed'
+                            template='<a class="instafeed" target="_blank" href="{{link}}"><img class="instafeed-pic" src="{{image}}" /></a>'
+                            userId='27672003'
+                            clientId='5ba6a992b3d6425b89cbd2985f052381'
+                            accessToken='27672003.5ba6a99.d64a7b98c12f493d8b8ae98e337f05bf'/>
+                    </div>
+                </Desktop>
+                <Mobile>
+                    <div className='instafeed' id='instafeed-mobile'>
+                        <Instafeed
+                            limit='4'
+                            ref='instafeed'
+                            resolution='thumbnail'
+                            sortBy='most-recent'
+                            target='instafeed-mobile'
+                            template='<a class="instafeed" target="_blank" href="{{link}}"><img class="instafeed-pic" src="{{image}}" /></a>'
+                            userId='27672003'
+                            clientId='5ba6a992b3d6425b89cbd2985f052381'
+                            accessToken='27672003.5ba6a99.d64a7b98c12f493d8b8ae98e337f05bf'/>
+                    </div>
+                </Mobile>
             </div>
+
         )
     }
 }

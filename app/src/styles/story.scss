@@ -1,13 +1,11 @@
 @import './variables.scss';
 .story-container {
-    color: white;
-    // background: -webkit-gradient( linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.9))), url('../images/backgrounds/car-trail-blurred.jpeg');
+    color: white; // background: -webkit-gradient( linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.9))), url('../images/backgrounds/car-trail-blurred.jpeg');
     // background: -webkit-linear-gradient( top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url('../images/backgrounds/car-trail-blurred.jpeg');
     // background: -o-linear-gradient( top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url('../images/backgrounds/car-trail-blurred.jpeg');
     // background: linear-gradient( to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url('../images/backgrounds/car-trail-blurred.jpeg');
     // background-size: cover;
-    background: linear-gradient(to bottom left, #6265da, #7e28ab, #9c0274);
-    // background: linear-gradient(to bottom left, #857fe4, #79399a, #564856);
+    background: linear-gradient(to bottom left, #6265da, #7e28ab, #9c0274); // background: linear-gradient(to bottom left, #857fe4, #79399a, #564856);
     height: 100%;
     .story-navigation {
         padding-top: 20px;
@@ -17,8 +15,7 @@
             text-align: center;
             hr {
                 height: .20rem;
-                width: 4.5em;
-                // background: mediumpurple;
+                width: 4.5em; // background: mediumpurple;
                 background: white;
                 border: none;
                 margin-left: auto;
@@ -58,8 +55,7 @@
                     bottom: 3px;
                     left: 0;
                     height: 3px;
-                    width: 100%;
-                    // background-color: mediumpurple;
+                    width: 100%; // background-color: mediumpurple;
                     background-color: white;
                     transform-origin: right top;
                     transform: scale(0, 1);
@@ -105,23 +101,26 @@
             text-align: left;
         }
         .about {
-            @media screen and (min-height: 680px) and (min-width: 991px) {
-                height: 500px;
-                overflow: auto;
-                padding-right: 30px;
+            padding-bottom: 20px;
+        }
+        .instafeed {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            padding-bottom: 20px;
+            .instafeed-container {
+                padding: 10px;
             }
-            @media screen and (min-height: 800px) and (min-width: 991px) {
-                height: 620px;
-                overflow: auto;
-                padding-right: 30px;
+            .instafeed-pic {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                -webkit-transition: transform 1s;
+                border-radius: 4px;
+                transition: transform 1s;
+                margin: 10px;
             }
-            @media screen and (min-height: 1000px) and (max-height: 1100px) and (min-width: 991px) {
-                height: 820px;
-                overflow: auto;
-                padding-right: 30px;
-            }
-            @media screen and (min-height: 1100px) {
-                height: 100%;
+            .instafeed-pic:hover {
+                transform: scale(1.05);
             }
         }
         .education {
@@ -205,7 +204,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
             -webkit-transition: transform 1s;
             position: relative;
             /* Safari */
@@ -218,10 +217,10 @@
                 color: white;
             }
             i {
-               position: absolute;
-               bottom: 20px;
-               right: 20px; 
-               color: #ffffff73;
+                position: absolute;
+                bottom: 20px;
+                right: 20px;
+                color: #ffffff73;
             }
             @media screen and (max-width: 425px) {
                 @include mobileContent;
@@ -242,7 +241,7 @@
                 font-size: 20px;
             }
             .about,
-            .experience, 
+            .experience,
             .education {
                 padding: 15px;
             }

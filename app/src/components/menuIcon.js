@@ -1,6 +1,6 @@
-import React from 'react';
-import FA from 'react-fontawesome'
-import IconButton from '@material-ui/core/IconButton';
+import React from 'react'
+// import FA from 'react-fontawesome'
+import IconButton from '@material-ui/core/IconButton'
 import '../styles/menuIcon.scss'
 
 export default class MenuIcon extends React.Component {
@@ -9,6 +9,10 @@ export default class MenuIcon extends React.Component {
         this.state = {}
     }
     render() {
+        const iconStyle = {
+            color: 'white',
+            fontSize: '.8em'
+        };
         return (
             <div className='menu'>
                 <IconButton
@@ -21,7 +25,7 @@ export default class MenuIcon extends React.Component {
                         .props
                         .openDrawer()
                 }}>
-                    <FA name='bars' className='menuIcon'/>
+                    <i className='fas fa-bars' style={iconStyle}></i>
                 </IconButton>
             </div>
         )
