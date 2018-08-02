@@ -161,7 +161,7 @@ export const Habitual = {
             'rs to streak their habits on a weekly basis and work towards getting the gold ba' +
             'dge. By the time the badge arrives the habit would have been developed. The goal' +
             ' of the app is to make building great habits as quick and easy as possible but t' +
-            'here is still many things that I wish to add to it',
+            'here is still many things that I wish to add to it.',
     info3: 'The design process involved figuring out how users interacted with mobile applic' +
             'ations and designing something that will take advantage of the mobile interface.' +
             ' The first designs for the application involved a large and complicated interfac' +

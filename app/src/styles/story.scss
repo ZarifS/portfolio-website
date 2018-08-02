@@ -109,8 +109,20 @@
             justify-content: center;
             align-content: center;
             padding-bottom: 20px;
-            .instafeed-container {
-                padding: 10px;
+            .instafeed-child-mobile {
+                display: inline-block;
+                flex-grow: 1;
+                width: calc(100% * (1/2) - 1px);
+            }
+            .instafeed-child-desktop {
+                display: inline-block;
+                flex-grow: 1;
+                width: calc(100% * (1/5) - 1px);
+            }
+            .instafeed-child-tablet {
+                display: inline-block;
+                flex-grow: 1;
+                width: calc(100% * (1/4) - 1px);
             }
             .instafeed-pic {
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -131,6 +143,9 @@
                     flex-wrap: wrap;
                     align-items: center;
                     justify-content: space-evenly;
+                }
+                @media screen and (min-width: 1400px) {
+                    margin-top: 5vh;
                 }
                 .education-item {
                     display: flex;
@@ -191,6 +206,9 @@
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-around;
+                @media screen and (min-width: 1400px) {
+                    margin-top: 5vh;
+                }
                 .experience-item {
                     margin: 10px;
                 }

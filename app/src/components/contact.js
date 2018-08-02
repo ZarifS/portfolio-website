@@ -59,7 +59,7 @@ export default class Contact extends Component {
                         <br/>
                         <br/>If you are interested in my work, it is all posted on Github and if you
                             wish to connect with me, feel free to send me an invitation through LinkedIn. If
-                            you are interested in working together or in the services I offer, please send me a
+                            you are interested in working together or in the services I offer please send me a
                             message as I would love to get in touch with you.</div>
                     <div className='contact-form'>
                         <form action="https://formspree.io/zarif.shahriar@hotmail.com" method="POST">

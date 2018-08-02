@@ -142,7 +142,7 @@ class About extends Component {
                     <div className='story-header'>A Developer At Heart.</div>
                     <div className='text'>My goal is to help individuals and companies with their
                         software needs, be it the user experience on their website, the design of their
-                        applications or consulting on their online persona. In the modern age, too many
+                        applications or consulting on their online persona. In the modern age too many
                         businesses suffer from a poor online persona, be it their websites or lack
                         thereof.
                     </div>
@@ -151,12 +151,12 @@ class About extends Component {
                         As a consultant and web architect, my goal is to help businesses and individuals
                         create a professional online image for themselves, something that will pay
                         dividends for years to come. Having worked in the public sector and in the
-                        private sector, as a Full Stack Developer (Agri-Food Canada and Ciena), Front
+                        private sector as a Full Stack Developer (Agri-Food Canada and Ciena), Front
                         End Engineer (Kinaxis), and a Back End Engineer (IBM), I've gained a technical
                         and theoretical skill set which allows me to consult others by understanding
                         their current positions and goals. Through these skills I can offer advanced,
                         holistic, and relevant solutions. Developing an image for yourself and your work
-                        is never easy, but with help it can be.
+                        is never easy but with help it can be.
                     </div>
                     <br/>
                     <div className='text'>Now you now know a bit about me, but I am still eager to
@@ -169,12 +169,12 @@ class About extends Component {
                 <Tablet>
                     <div className='instafeed' id='instafeed-tablet'>
                         <Instafeed
-                            limit='6'
+                            limit='8'
                             ref='instafeed'
                             resolution='thumbnail'
                             sortBy='most-recent'
                             target='instafeed-tablet'
-                            template='<a class="instafeed" target="_blank" href="{{link}}"><img class="instafeed-pic" src="{{image}}" /></a>'
+                            template='<a class="instafeed-child-tablet" target="_blank" href="{{link}}"><img class="instafeed-pic" src="{{image}}" /></a>'
                             userId='27672003'
                             clientId='5ba6a992b3d6425b89cbd2985f052381'
                             accessToken='27672003.5ba6a99.d64a7b98c12f493d8b8ae98e337f05bf'/>
@@ -188,7 +188,7 @@ class About extends Component {
                             resolution='thumbnail'
                             sortBy='most-recent'
                             target='instafeed'
-                            template='<a class="instafeed" target="_blank" href="{{link}}"><img class="instafeed-pic" src="{{image}}" /></a>'
+                            template='<a class="instafeed-child-desktop" target="_blank" href="{{link}}"><img class="instafeed-pic" src="{{image}}" /></a>'
                             userId='27672003'
                             clientId='5ba6a992b3d6425b89cbd2985f052381'
                             accessToken='27672003.5ba6a99.d64a7b98c12f493d8b8ae98e337f05bf'/>
@@ -202,7 +202,7 @@ class About extends Component {
                             resolution='thumbnail'
                             sortBy='most-recent'
                             target='instafeed-mobile'
-                            template='<a class="instafeed" target="_blank" href="{{link}}"><img class="instafeed-pic" src="{{image}}" /></a>'
+                            template='<a class="instafeed-child-mobile" target="_blank" href="{{link}}"><img class="instafeed-pic" src="{{image}}" /></a>'
                             userId='27672003'
                             clientId='5ba6a992b3d6425b89cbd2985f052381'
                             accessToken='27672003.5ba6a99.d64a7b98c12f493d8b8ae98e337f05bf'/>
