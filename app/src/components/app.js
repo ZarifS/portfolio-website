@@ -11,6 +11,7 @@ import WorksRouteHandler from './works'
 import InDevelopment from './inDevelopment'
 import Services from './services'
 import Contact from './contact'
+import BlogRouteHandler from './blogHome';
 
 const Desktop = props => <Responsive {...props} minWidth={992}/>
 const Tablet = props => <Responsive {...props} maxWidth={991}/>
@@ -28,6 +29,7 @@ class App extends React.Component {
     openDrawer() {
         this.setState({menuOpen: true})
     }
+
     render() {
         return (
             <BrowserRouter>
@@ -37,7 +39,7 @@ class App extends React.Component {
                             <Route exact path="/" component={Home}/>
                             <Route path="/story" component={StoryPageRouteHandler}/>
                             <Route path="/works" component={WorksRouteHandler}/>
-                            <Route path="/blog" component={InDevelopment}/>
+                            <Route path="/blog" component={BlogRouteHandler}/>
                             <Route exact path="/services" component={Services}/>
                             <Route exact path="/contact" component={Contact}/>
                         </Switch>
