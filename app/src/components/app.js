@@ -1,16 +1,19 @@
 import React from 'react'
-import { BrowserRouter, Route, Link, Switch } from 'react-router-dom'
+import {BrowserRouter, Route, Link, Switch} from 'react-router-dom'
 import SidePanel from './sidePanel'
 import MenuIcon from './menuIcon'
 import Responsive from 'react-responsive'
 import Drawer from '@material-ui/core/SwipeableDrawer'
 import "../styles/app.scss"
-import MyStory from './myStory'
+import StoryPageRouteHandler from './myStory'
 import Home from './home'
-import Works from './works'
+import WorksRouteHandler from './works'
+import InDevelopment from './inDevelopment'
+import Services from './services'
+import Contact from './contact'
 
-const Desktop = props => <Responsive {...props} minWidth={992} />
-const Tablet = props => <Responsive {...props} maxWidth={991} />
+const Desktop = props => <Responsive {...props} minWidth={992}/>
+const Tablet = props => <Responsive {...props} maxWidth={991}/>
 
 class App extends React.Component {
     constructor(props) {
@@ -23,7 +26,7 @@ class App extends React.Component {
             .bind(this)
     }
     openDrawer() {
-        this.setState({ menuOpen: true })
+        this.setState({menuOpen: true})
     }
     render() {
         return (
@@ -31,25 +34,28 @@ class App extends React.Component {
                 <div className='app'>
                     <div className='content-area'>
                         <Switch>
-                            <Route exact path="/" component={Home} />
-                            <Route path="/story" component={MyStory} />
-                            <Route exact path="/works" component={Works} />
+                            <Route exact path="/" component={Home}/>
+                            <Route path="/story" component={StoryPageRouteHandler}/>
+                            <Route path="/works" component={WorksRouteHandler}/>
+                            <Route path="/blog" component={InDevelopment}/>
+                            <Route exact path="/services" component={Services}/>
+                            <Route exact path="/contact" component={Contact}/>
                         </Switch>
                     </div>
                     <Desktop>
-                        < SidePanel />
+                        < SidePanel/>
                     </Desktop>
                     <Tablet>
                         <MenuIcon
                             openDrawer={this
-                                .openDrawer
-                                .bind(this)} />
+                            .openDrawer
+                            .bind(this)}/>
                         <Drawer
                             open={this.state.menuOpen}
-                            onClose={() => this.setState({ menuOpen: false })}
-                            onOpen={() => this.setState({ menuOpen: true })}
+                            onClose={() => this.setState({menuOpen: false})}
+                            onOpen={() => this.setState({menuOpen: true})}
                             anchor="right">
-                            <SidePanel closerMenu={() => this.setState({ menuOpen: false })} />
+                            <SidePanel closerMenu={() => this.setState({menuOpen: false})}/>
                         </Drawer>
                     </Tablet>
                 </div>

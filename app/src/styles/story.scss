@@ -1,0 +1,273 @@
+@import './variables.scss';
+.story-container {
+    color: white; // background: -webkit-gradient( linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.9))), url('../images/backgrounds/car-trail-blurred.jpeg');
+    // background: -webkit-linear-gradient( top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url('../images/backgrounds/car-trail-blurred.jpeg');
+    // background: -o-linear-gradient( top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url('../images/backgrounds/car-trail-blurred.jpeg');
+    // background: linear-gradient( to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url('../images/backgrounds/car-trail-blurred.jpeg');
+    // background-size: cover;
+    background: linear-gradient(to bottom left, #6265da, #7e28ab, #9c0274); // background: linear-gradient(to bottom left, #857fe4, #79399a, #564856);
+    height: 100%;
+    .story-navigation {
+        padding-top: 20px;
+        .title-header {
+            @include header;
+            font-size: 35px;
+            text-align: center;
+            hr {
+                height: .20rem;
+                width: 4.5em; // background: mediumpurple;
+                background: white;
+                border: none;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 0.2rem;
+            }
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            .nav-item {
+                width: 60px;
+                height: 60px;
+                padding-left: 10px;
+                padding-right: 10px;
+                font-size: 2em;
+                text-align: center;
+                @media screen and (max-width: 425px) {
+                    width: 40px;
+                    height: 40px;
+                    padding-left: 5px;
+                    padding-right: 5px;
+                    font-size: 1.4em;
+                }
+                a {
+                    position: relative;
+                    display: block;
+                    padding: 8px 0;
+                    margin: 0 5px;
+                    color: white;
+                    transition: color 0.1s, background-color 0.1s, padding 0.2s ease-in;
+                }
+                a::before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    bottom: 3px;
+                    left: 0;
+                    height: 3px;
+                    width: 100%; // background-color: mediumpurple;
+                    background-color: white;
+                    transform-origin: right top;
+                    transform: scale(0, 1);
+                    transition: color 0.1s, transform 0.2s ease-out;
+                }
+                a:hover::before,
+                a:focus::before {
+                    transform-origin: left top;
+                    transform: scale(1, 1);
+                }
+            }
+            .active {
+                a::before {
+                    // background-color: mediumpurple;
+                    background-color: white;
+                    transform: scale(1, 1);
+                }
+            }
+        }
+        @media screen and (max-width: 425px) {
+            @include mobileContent;
+        }
+        @media screen and (min-width: 1400px) {
+            @include desktopContent;
+        }
+    }
+    .story-content {
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        .story-header {
+            @include text-header;
+            font-size: 25px;
+            text-align: center;
+        }
+        .text-header {
+            @include text-header;
+            font-size: 22px;
+        }
+        .text {
+            @include text;
+            font-size: 15px;
+            text-align: left;
+        }
+        .about {
+            padding-bottom: 20px;
+        }
+        .instafeed {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            padding-bottom: 20px;
+            .instafeed-child-mobile {
+                display: inline-block;
+                flex-grow: 1;
+                width: calc(100% * (1/2) - 1px);
+            }
+            .instafeed-child-desktop {
+                display: inline-block;
+                flex-grow: 1;
+                width: calc(100% * (1/5) - 1px);
+            }
+            .instafeed-child-tablet {
+                display: inline-block;
+                flex-grow: 1;
+                width: calc(100% * (1/4) - 1px);
+            }
+            .instafeed-pic {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                -webkit-transition: transform 1s;
+                border-radius: 4px;
+                transition: transform 1s;
+                margin: 10px;
+            }
+            .instafeed-pic:hover {
+                transform: scale(1.05);
+            }
+        }
+        .education {
+            .education-content {
+                display: flex;
+                justify-content: space-evenly;
+                @media screen and (max-width: 760px) {
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: space-evenly;
+                }
+                @media screen and (min-width: 1400px) {
+                    margin-top: 5vh;
+                }
+                .education-item {
+                    display: flex;
+                    flex-direction: column;
+                    padding-bottom: 30px;
+                    .text-header {
+                        text-align: center;
+                        padding-bottom: 10px;
+                    }
+                    .institution {
+                        display: flex;
+                        align-items: center;
+                        padding-bottom: 10px;
+                        .logo-uottawa {
+                            width: 100px;
+                            height: 100px;
+                            background-image: url('../images/logos/uottawa.png');
+                            background-size: contain;
+                        }
+                        .logo-udemy {
+                            width: 100px;
+                            height: 100px;
+                            background-image: url('../images/logos/udemy.png');
+                            background-size: contain;
+                        }
+                        .info {
+                            padding-left: 20px;
+                            display: column;
+                            .text {
+                                font-size: 14px;
+                            }
+                            .title {
+                                font-size: 16px !important;
+                                padding-bottom: 5px;
+                            }
+                        }
+                    }
+                    .notable {
+                        display: flex;
+                        flex-direction: column;
+                        max-width: 300px;
+                        .text {
+                            font-size: 14px;
+                        }
+                        .title {
+                            font-size: 18px !important;
+                            padding-bottom: 5px;
+                        }
+                    }
+                }
+            }
+        }
+        .experience {
+            .title-header {
+                text-align: center;
+            }
+            .experience-content {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                @media screen and (min-width: 1400px) {
+                    margin-top: 5vh;
+                }
+                .experience-item {
+                    margin: 10px;
+                }
+            }
+        }
+        .work-card {
+            width: 350px;
+            height: 200px;
+            border-radius: 3px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            -webkit-transition: transform 1s;
+            position: relative;
+            /* Safari */
+            transition: transform 1s;
+            .work-logo {
+                height: 100px;
+                width: 200px;
+            }
+            .work-role {
+                color: white;
+            }
+            i {
+                position: absolute;
+                bottom: 20px;
+                right: 20px;
+                color: #ffffff73;
+            }
+            @media screen and (max-width: 425px) {
+                @include mobileContent;
+                width: 300px;
+                height: 150px;
+                .story-header {
+                    font-size: 20px;
+                }
+            }
+        }
+        .work-card:hover {
+            transform: scale(1.05);
+        }
+        @media screen and (max-width: 425px) {
+            @include mobileContent;
+            width: auto;
+            .story-header {
+                font-size: 20px;
+            }
+            .about,
+            .experience,
+            .education {
+                padding: 15px;
+            }
+        }
+        @media screen and (min-width: 1400px) {
+            @include desktopContent;
+            width: 70%;
+            font-size: 30px;
+        }
+    }
+}

@@ -1,15 +1,21 @@
 @import './_variables';
-
 @mixin headerResponsive {
-    @include text;
+    @include text-header;
     color: white;
     text-align: center;
     text-transform: uppercase;
 }
+
+.particlesCanvasStyle {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+}
+
 .side-panel-container {
     width: 20vw;
     min-width: 250px;
-    height: 100vh;
+    height: 100%;
     min-height: 300px;
     display: -ms-flexbox;
     display: flex;
@@ -22,15 +28,20 @@
     -webkit-animation: fadein 2s;
     animation: fadein 2s;
     background-color: $side-panel-bg;
-    position: relative;
-
+    position: fixed;
+    right: 0;
+    @media screen and (max-width: 991px) {
+        position: relative;
+    }
     a {
-        color: inherit; /* blue colors for links too */
-        text-decoration: inherit; /* no underline */
-      }
-
-    a:hover { color:#8549c8; }
-
+        color: inherit;
+        /* blue colors for links too */
+        text-decoration: inherit;
+        /* no underline */
+    }
+    a:hover {
+        color: #8549c8;
+    }
     .header-navigation {
         display: flex;
         justify-content: space-evenly;
@@ -61,6 +72,7 @@
     }
     .content-navigation {
         @include headerResponsive;
+        position: relative;
         .nav-item {
             padding-top: 5px;
             padding-bottom: 5px;
@@ -68,7 +80,6 @@
             font-size: 25px;
         }
     }
-
     .contact-navigation {
         @include headerResponsive;
         width: 20vw;
@@ -79,11 +90,8 @@
         height: 40px;
         cursor: pointer;
         font-size: 20px;
-
-        a:hover { 
+        a:hover {
             color: white;
-         }
+        }
     }
-
-    
 }

@@ -1,0 +1,69 @@
+@import './variables.scss';
+.job-page {
+    min-height: 100vh;
+    .exit-button {
+        a:link {
+            text-decoration: none;
+        }
+        a:visited {
+            text-decoration: none;
+        }
+        position: fixed;
+    }
+    .job-page-container {
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        @include text;
+        color: white;
+        .job-page-header {
+            width: 205px;
+            img {
+                padding-bottom: 10px;
+                margin-top: 75px;
+                width: 200px;
+            }
+            hr {
+                height: 3px;
+                background: white;
+                border: none;
+                margin-left: 5px;
+                margin-top: -10px;
+                margin-right: 0px;
+            }
+        }
+        .position {
+            line-height: 2em;
+            .title-header {
+                font-size: 35px;
+            }
+            .text-header {
+                font-size: 24px;
+            }
+            @media screen and (max-width: 425px) {
+                @include mobileContent;
+                line-height: 1.2
+            }
+            @media screen and (min-width: 1400px) {
+                @include desktopContent;
+                line-height: 2.5em;
+            }
+        }
+        .position-info {
+            margin-top: 5vh;
+        }
+        .position-chips {
+            display: flex;
+            margin-top: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        @media screen and (max-width: 425px) {
+            width: auto;
+            padding-left: 10px;
+        }
+        @media screen and (min-width: 1400px) {
+            width: 70%;
+        }
+    }
+}

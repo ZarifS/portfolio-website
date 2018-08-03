@@ -1,0 +1,12 @@
+.chip {
+    min-width: 80px;
+    background-color: #cccbcb8c;
+    display: inline-block;
+    border-radius: 20px;
+    text-align: center;
+    margin: 10px;
+    .value {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
