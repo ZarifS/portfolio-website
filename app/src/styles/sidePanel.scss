@@ -56,26 +56,37 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            background-color: #0c0c0c;
         }
         .home {
-            background-color: #8549c8;
+            i {
+                color: #b36eff;
+            }
         }
         .linkedIn {
-            background-color: #3399ff;
+            i {
+                color: #3399ff;
+            }
         }
         .github {
-            background-color: #bd2033;
+            i {
+                color: #ff213c;
+            }
+            
         }
         .resume {
-            background-color: #e6831c;
+            i {
+                color: #ffdd21;
+            }
         }
     }
     .content-navigation {
         @include headerResponsive;
         position: relative;
+        margin-top:45px;
         .nav-item {
-            padding-top: 5px;
-            padding-bottom: 5px;
+            padding-top: 10px;
+            padding-bottom: 10px;
             cursor: pointer;
             font-size: 25px;
         }

@@ -6,8 +6,8 @@ import JobPage from './jobPage'
 import Instafeed from 'react-instafeed'
 import Responsive from 'react-responsive'
 const Desktop = props => <Responsive {...props} minWidth={1291}/>
-const Tablet = props => <Responsive {...props} maxWidth={1290} minWidth={801}/>
-const Mobile = props => <Responsive {...props} maxWidth={800}/>
+const Tablet = props => <Responsive {...props} maxWidth={1290} minWidth={768}/>
+const Mobile = props => <Responsive {...props} maxWidth={767}/>
 
 // Check if the route being passed is specifically a JobPage if not render then
 // default MyStory component
@@ -202,7 +202,7 @@ class About extends Component {
                             resolution='thumbnail'
                             sortBy='most-recent'
                             target='instafeed-mobile'
-                            template='<a class="instafeed-child-mobile" target="_blank" href="{{link}}"><img class="instafeed-pic" src="{{image}}" /></a>'
+                            template='<a class="instafeed-child-mobile" target="_blank" href="{{link}}"><img class="instafeed-pic-mobile" src="{{image}}" /></a>'
                             userId='27672003'
                             clientId='5ba6a992b3d6425b89cbd2985f052381'
                             accessToken='27672003.5ba6a99.d64a7b98c12f493d8b8ae98e337f05bf'/>

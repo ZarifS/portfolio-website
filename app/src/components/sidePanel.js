@@ -16,13 +16,15 @@ export default class SidePanel extends React.Component {
             .bind(this)
     }
     onNavBarElementClick() {
-        if (this.props.closerMenu !== undefined) {     this         .props
-        .closerMenu() }
+        if (this.props.closerMenu !== undefined) {
+            this
+                .props
+                .closerMenu()
+        }
     }
 
     render() {
         const iconStyle = {
-            color: 'white',
             fontSize: '1.5em'
         };
         return (
@@ -72,19 +74,24 @@ export default class SidePanel extends React.Component {
                             Services
                         </Link>
                     </div>
-                    <div className='nav-item' onClick={() => this.onNavBarElementClick()}>
+                    {/* <div className='nav-item' onClick={() => this.onNavBarElementClick()}>
                         <Link to='/blog'>
                             Blog
                         </Link>
-                    </div>
-                </div>
-                <div className='contact-navigation'>
+                    </div> */}
                     <div className='nav-item'>
                         <Link to='/contact'>
                             Contact
                         </Link>
                     </div>
                 </div>
+                {/* <div className='contact-navigation'>
+                    <div className='nav-item'>
+                        <Link to='/contact'>
+                            Contact
+                        </Link>
+                    </div>
+                </div> */}
             </div>
         )
     }
