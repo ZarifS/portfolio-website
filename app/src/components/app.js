@@ -11,6 +11,8 @@ import WorksRouteHandler from './works'
 import InDevelopment from './inDevelopment'
 import Services from './services'
 import Contact from './contact'
+import Blog from './blog'
+import BlogPost from './blogPost'
 
 const Desktop = props => <Responsive {...props} minWidth={992}/>
 const Tablet = props => <Responsive {...props} maxWidth={991}/>
@@ -37,7 +39,8 @@ class App extends React.Component {
                             <Route exact path="/" component={Home}/>
                             <Route path="/story" component={StoryPageRouteHandler}/>
                             <Route path="/works" component={WorksRouteHandler}/>
-                            <Route path="/blog" component={InDevelopment}/>
+                            <Route exact path="/blog" component={Blog}/>
+                            <Route path='/blog/:blogPost' component={BlogPost}/>
                             <Route exact path="/services" component={Services}/>
                             <Route exact path="/contact" component={Contact}/>
                         </Switch>

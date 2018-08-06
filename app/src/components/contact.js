@@ -29,7 +29,6 @@ export default class Contact extends Component {
             if (event.keyCode == 13) {
                 event.preventDefault();
                 var s = message.value
-                console.log(s)
                 document
                     .getElementById('message')
                     .value = s + '\n'
