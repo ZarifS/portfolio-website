@@ -1,0 +1,30 @@
+@import './variables.scss';
+
+.noMatch-page {
+    width: 100%;
+    color: white;
+    min-height: 100vh;
+    background: linear-gradient(to bottom left, #1b1b1b,#383838);
+    .noMatch-info {
+        margin-left: 10vw;
+        text-align: left;
+        .title-header {
+            @include title;
+            font-size: 40px;
+        }
+        .text-header {
+            @include text;
+            font-size: 23px;
+        }
+        padding-top: 40vh;
+        @media screen and (max-width: 425px) {
+            @include mobileContent;
+            width: auto;
+            padding-left: 10px;
+        }
+        @media screen and (min-width: 1400px) {
+            @include desktopContent;
+            font-size: 30px;
+        }
+    }
+}
