@@ -1,9 +1,11 @@
 @import './variables.scss';
-
 .inDevelopment-page {
     width: 100%;
     color: white;
     min-height: 100vh;
+    background: -webkit-gradient(linear, right top, left bottom, from(#17e0c4), color-stop(#138bd2), to(#1319d2));
+    background: -webkit-linear-gradient(top right, #17e0c4, #138bd2, #1319d2);
+    background: -o-linear-gradient(top right, #17e0c4, #138bd2, #1319d2);
     background: linear-gradient(to bottom left, #17e0c4, #138bd2, #1319d2);
     .development-info {
         margin-left: 10vw;

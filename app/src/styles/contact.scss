@@ -3,6 +3,9 @@
     width: 100%;
     color: white;
     min-height: 100vh;
+    background: -webkit-gradient(linear, right top, left bottom, from(#32a3ce), color-stop(#855dd4), to(#8e15da));
+    background: -webkit-linear-gradient(top right, #32a3ce, #855dd4, #8e15da);
+    background: -o-linear-gradient(top right, #32a3ce, #855dd4, #8e15da);
     background: linear-gradient(to bottom left, #32a3ce, #855dd4, #8e15da);
     .contact-header {
         padding-top: 20px;
@@ -28,15 +31,25 @@
         }
     }
     .contact-content {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         margin-left: auto;
         margin-right: auto;
         width: 80%;
         @include text;
         padding-bottom: 20px;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
+        -ms-flex-line-pack: center;
         align-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
         .contact-info {
             padding: 10px;
@@ -51,9 +64,18 @@
             width: 50%;
             min-width: 300px;
             form {
+                display: -webkit-box;
+                display: -ms-flexbox;
                 display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
                 flex-direction: column;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
                 justify-content: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
                 align-items: center;
                 /* Style inputs with type="text", select elements and textareas */
                 input[type=text],
@@ -68,6 +90,7 @@
                     /* Gray border */
                     border-radius: 4px;
                     /* Rounded borders */
+                    -webkit-box-sizing: border-box;
                     box-sizing: border-box;
                     /* Make sure that padding and width stays in place */
                     margin-top: 6px;
