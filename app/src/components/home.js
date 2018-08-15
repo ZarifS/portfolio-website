@@ -11,9 +11,9 @@ class Home extends Component {
             <div className='home-container'>
                 <div className='home-header'>
                     <div className='title'>Zarif Shahriar</div>
-                    <div className='title-header'>Developer. Designer. Entreprenuer.</div>
+                    <div className='title-header'>Developer. Designer. Entrepreneur.</div>
                     <div className='text'>Software Engineering student at the University of Ottawa
-                        and a designer at heart. I love to create beautfiul and interesting things. Lets
+                        and a designer at heart. I love to create beautiful and interesting things. Lets
                         get to know each other.</div>
                 </div>
                 <div className='home-footer'>
