@@ -148,13 +148,13 @@ class About extends Component {
                     </div>
                     <br/>
                     <div className='text'>
-                        As a consultant and web architect, my goal is to help businesses and individuals
+                        As a consultant and web architect my goal is to help businesses and individuals
                         create a professional online image for themselves, something that will pay
                         dividends for years to come. Having worked in the public sector and in the
-                        private sector as a Full Stack Developer (Agri-Food Canada and Ciena), Front
-                        End Engineer (Kinaxis), and a Back End Engineer (IBM), I've gained a technical
-                        and theoretical skill set which allows me to consult others by understanding
-                        their current positions and goals. Through these skills I can offer advanced,
+                        private sector as a Full Stack Developer (Agri-Food Canada and Ciena), Front End
+                        Engineer (Kinaxis) and a Back End Engineer (IBM), I've gained a technical and
+                        theoretical skill set which allows me to consult others by understanding their
+                        current positions and goals. Through these skills I can offer advanced,
                         holistic, and relevant solutions. Developing an image for yourself and your work
                         is never easy but with help it can be.
                     </div>
@@ -251,6 +251,12 @@ class Education extends Component {
                             </div>
                             <div className='text'>Professional Engineering Practice
                             </div>
+                            <div className='text'>Software Requirements Engineering
+                            </div>
+                            <div className='text'>Design and Analysis of Algorithms
+                            </div>
+                            <div className='text'>Software Architecture and Design.
+                            </div>
                         </div>
                     </div>
                     <div className='education-item'>
@@ -275,6 +281,11 @@ class Education extends Component {
                             <div className='text'>
                                 <i>Android Development by Rob Percival</i><br/>
                                 Complete course on Android design and Java development.
+                            </div>
+                            <div className='text'>
+                                <i>Web UI and UX Design Using Adobe XD</i><br/>
+                                Complete course on user experience design using Adobe XD from a certified UX
+                                designer.
                             </div>
                         </div>
                     </div>
