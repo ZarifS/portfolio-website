@@ -11,7 +11,11 @@ import WorksRouteHandler from './works'
 import InDevelopment from './inDevelopment'
 import Services from './services'
 import Contact from './contact'
+<<<<<<< HEAD
 import BlogRouteHandler from './blogHome';
+=======
+import NoMatch from './noMatch'
+>>>>>>> master
 
 const Desktop = props => <Responsive {...props} minWidth={992}/>
 const Tablet = props => <Responsive {...props} maxWidth={991}/>
@@ -42,6 +46,7 @@ class App extends React.Component {
                             <Route path="/blog" component={BlogRouteHandler}/>
                             <Route exact path="/services" component={Services}/>
                             <Route exact path="/contact" component={Contact}/>
+                            <Route component={NoMatch}/>
                         </Switch>
                     </div>
                     <Desktop>

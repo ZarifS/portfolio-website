@@ -1,7 +1,11 @@
 {
   "particles": {
     "number": {
+<<<<<<< HEAD
       "value": 40,
+=======
+      "value": 30,
+>>>>>>> master
       "density": {
         "enable": true,
         "value_area": 800

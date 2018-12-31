@@ -18,6 +18,9 @@
         color: white;
         .job-page-header {
             width: 205px;
+            @media screen and (min-width: 1400px) {
+                padding-top: 5vh;
+            }
             img {
                 padding-bottom: 10px;
                 margin-top: 75px;
@@ -53,9 +56,14 @@
             margin-top: 5vh;
         }
         .position-chips {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
             margin-top: 10px;
+            -ms-flex-wrap: wrap;
             flex-wrap: wrap;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
             justify-content: center;
         }
         @media screen and (max-width: 425px) {

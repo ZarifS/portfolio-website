@@ -24,7 +24,7 @@
             @include text;
             font-size: 15px;
             text-align: left;
-            padding-top:20px;
+            padding-top: 20px;
             width: 40vw;
         }
         @media screen and (max-width: 425px) {
@@ -34,9 +34,67 @@
                 width: 200px;
             }
         }
-        @media screen and (min-width: 1400px){
+        @media screen and (min-width: 1400px) {
             @include desktopContent;
             padding-left: 80px;
+        }
+    }
+    .home-footer {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding-bottom: 50px;
+        margin-top: 50px;
+        .button {
+            -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            -o-transition: all .3s ease-in;
+            -webkit-transition: all .3s ease-in;
+            transition: all .3s ease-in;
+            width: 200px;
+            height: 35px;
+            border: 1px solid white;
+            border-radius: 20px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            color: white !important;
+            .text {
+                @include text-header;
+            }
+            @media screen and (max-width: 425px) {
+                @include mobileContent;
+                width: 180px;
+                height: 30px;
+                background: -webkit-gradient(linear, right top, left top, from(#6265da), to(#7e28ab));
+                background: -webkit-linear-gradient(right, #6265da, #7e28ab);
+                background: -o-linear-gradient(right, #6265da, #7e28ab);
+                background: linear-gradient(to left, #6265da, #7e28ab);
+            }
+            @media screen and (min-width: 1400px) {
+                width: 250px;
+                height: 40px;
+                @include desktopContent;
+            }
+        }
+        .button:hover {
+            -webkit-transform: scale(1.05);
+            -ms-transform: scale(1.05);
+            transform: scale(1.05); // 
+            background: linear-gradient(to left, #6265da, #7e28ab);
         }
     }
 }

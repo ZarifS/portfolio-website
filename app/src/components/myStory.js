@@ -6,8 +6,8 @@ import JobPage from './jobPage'
 import Instafeed from 'react-instafeed'
 import Responsive from 'react-responsive'
 const Desktop = props => <Responsive {...props} minWidth={1291}/>
-const Tablet = props => <Responsive {...props} maxWidth={1290} minWidth={801}/>
-const Mobile = props => <Responsive {...props} maxWidth={800}/>
+const Tablet = props => <Responsive {...props} maxWidth={1290} minWidth={768}/>
+const Mobile = props => <Responsive {...props} maxWidth={767}/>
 
 // Check if the route being passed is specifically a JobPage if not render then
 // default MyStory component
@@ -148,13 +148,13 @@ class About extends Component {
                     </div>
                     <br/>
                     <div className='text'>
-                        As a consultant and web architect, my goal is to help businesses and individuals
+                        As a consultant and web architect my goal is to help businesses and individuals
                         create a professional online image for themselves, something that will pay
                         dividends for years to come. Having worked in the public sector and in the
-                        private sector as a Full Stack Developer (Agri-Food Canada and Ciena), Front
-                        End Engineer (Kinaxis), and a Back End Engineer (IBM), I've gained a technical
-                        and theoretical skill set which allows me to consult others by understanding
-                        their current positions and goals. Through these skills I can offer advanced,
+                        private sector as a Full Stack Developer (Agri-Food Canada and Ciena), Front End
+                        Engineer (Kinaxis) and a Back End Engineer (IBM), I've gained a technical and
+                        theoretical skill set which allows me to consult others by understanding their
+                        current positions and goals. Through these skills I can offer advanced,
                         holistic, and relevant solutions. Developing an image for yourself and your work
                         is never easy but with help it can be.
                     </div>
@@ -202,7 +202,7 @@ class About extends Component {
                             resolution='thumbnail'
                             sortBy='most-recent'
                             target='instafeed-mobile'
-                            template='<a class="instafeed-child-mobile" target="_blank" href="{{link}}"><img class="instafeed-pic" src="{{image}}" /></a>'
+                            template='<a class="instafeed-child-mobile" target="_blank" href="{{link}}"><img class="instafeed-pic-mobile" src="{{image}}" /></a>'
                             userId='27672003'
                             clientId='5ba6a992b3d6425b89cbd2985f052381'
                             accessToken='27672003.5ba6a99.d64a7b98c12f493d8b8ae98e337f05bf'/>
@@ -251,6 +251,12 @@ class Education extends Component {
                             </div>
                             <div className='text'>Professional Engineering Practice
                             </div>
+                            <div className='text'>Software Requirements Engineering
+                            </div>
+                            <div className='text'>Design and Analysis of Algorithms
+                            </div>
+                            <div className='text'>Software Architecture and Design.
+                            </div>
                         </div>
                     </div>
                     <div className='education-item'>
@@ -275,6 +281,10 @@ class Education extends Component {
                             <div className='text'>
                                 <i>Android Development by Rob Percival</i><br/>
                                 Complete course on Android design and Java development.
+                            </div>
+                            <div className='text'>
+                                <i>Web UI and UX Design Using Adobe XD</i><br/>
+                                Complete course on user experience design using Adobe XD by Daniel Walter.
                             </div>
                         </div>
                     </div>

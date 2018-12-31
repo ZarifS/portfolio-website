@@ -110,9 +110,10 @@
             align-content: center;
             padding-bottom: 20px;
             .instafeed-child-mobile {
-                display: inline-block;
-                flex-grow: 1;
-                width: calc(100% * (1/2) - 1px);
+                // display: inline-block;
+                // flex-grow: 1;
+                // width: calc(100% * (1/2) - 1px);
+                padding: 2px;
             }
             .instafeed-child-desktop {
                 display: inline-block;
@@ -130,6 +131,10 @@
                 border-radius: 4px;
                 transition: transform 1s;
                 margin: 10px;
+            }
+            .instafeed-pic-mobile {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                border-radius: 4px;
             }
             .instafeed-pic:hover {
                 transform: scale(1.05);

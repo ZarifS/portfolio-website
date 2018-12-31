@@ -2,8 +2,10 @@
 .works-page {
     width: 100%;
     color: white;
-    min-height: 100vh;
-    // background: linear-gradient(to bottom left, #8588e0, #7232d8, #b933bb);
+    min-height: 100vh; // background: linear-gradient(to bottom left, #8588e0, #7232d8, #b933bb);
+    background: -webkit-gradient(linear, right top, left bottom, from(#f33bc3), color-stop(#621bd4), to(#b933bb));
+    background: -webkit-linear-gradient(top right, #f33bc3, #621bd4, #b933bb);
+    background: -o-linear-gradient(top right, #f33bc3, #621bd4, #b933bb);
     background: linear-gradient(to bottom left, #f33bc3, #621bd4, #b933bb);
     .works-header {
         padding-top: 20px;
@@ -50,9 +52,14 @@
                 }
             }
             .project-container {
+                display: -webkit-box;
+                display: -ms-flexbox;
                 display: flex;
                 margin-top: 20px;
+                -ms-flex-wrap: wrap;
                 flex-wrap: wrap;
+                -webkit-box-pack: space-evenly;
+                -ms-flex-pack: space-evenly;
                 justify-content: space-evenly;
             }
         }
@@ -69,19 +76,35 @@
     width: 350px;
     height: 200px;
     border-radius: 3px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     -webkit-transition: transform 1s;
     position: relative;
     color: white;
     margin: 10px;
     @include text-header;
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
     /* Safari */
+    -webkit-transition: -webkit-transform 1s;
+    transition: -webkit-transform 1s;
+    -o-transition: transform 1s;
     transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;
     .project-title {
         margin-left: 20px;
         margin-right: 20px;
@@ -116,6 +139,8 @@
 }
 
 .project-card:hover {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
     transform: scale(1.05);
 }
 
@@ -123,19 +148,35 @@
     width: 300px;
     height: 150px;
     border-radius: 3px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     -webkit-transition: transform 1s;
     position: relative;
     color: white;
     margin: 10px;
     @include text-header;
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
     /* Safari */
+    -webkit-transition: -webkit-transform 1s;
+    transition: -webkit-transform 1s;
+    -o-transition: transform 1s;
     transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;
     .research-title {
         margin-left: 10px;
         margin-right: 10px;
@@ -170,5 +211,7 @@
 }
 
 .research-card:hover {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
     transform: scale(1.05);
 }

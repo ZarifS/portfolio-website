@@ -1,6 +1,5 @@
 @import './reset.scss';
 @import './variables.scss';
-
 p {
     @include text;
 }
@@ -8,9 +7,10 @@ p {
 .app {
     height: 100%;
     display: -ms-flexbox;
+    display: -webkit-box;
     display: flex;
-     /* width */
-     ::-webkit-scrollbar {
+    /* width */
+    ::-webkit-scrollbar {
         width: 10px;
     }
     /* Track */

@@ -1,13 +1,13 @@
 @import './variables.scss';
-.inDevelopment-page {
+.noMatch-page {
     width: 100%;
     color: white;
     min-height: 100vh;
-    background: -webkit-gradient(linear, right top, left bottom, from(#17e0c4), color-stop(#138bd2), to(#1319d2));
-    background: -webkit-linear-gradient(top right, #17e0c4, #138bd2, #1319d2);
-    background: -o-linear-gradient(top right, #17e0c4, #138bd2, #1319d2);
-    background: linear-gradient(to bottom left, #17e0c4, #138bd2, #1319d2);
-    .development-info {
+    background: -webkit-gradient(linear, right top, left bottom, from(#1b1b1b), to(#383838));
+    background: -webkit-linear-gradient(top right, #1b1b1b, #383838);
+    background: -o-linear-gradient(top right, #1b1b1b, #383838);
+    background: linear-gradient(to bottom left, #1b1b1b, #383838);
+    .noMatch-info {
         margin-left: 10vw;
         text-align: left;
         .title-header {

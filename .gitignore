@@ -332,3 +332,6 @@ ASALocalRun/
 
 # Build production files
 dist/
+
+#Static files used for helping design site
+website-files/
