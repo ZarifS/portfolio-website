@@ -11,11 +11,7 @@ import WorksRouteHandler from './works'
 import InDevelopment from './inDevelopment'
 import Services from './services'
 import Contact from './contact'
-<<<<<<< HEAD
-import BlogRouteHandler from './blogHome';
-=======
 import NoMatch from './noMatch'
->>>>>>> master
 
 const Desktop = props => <Responsive {...props} minWidth={992}/>
 const Tablet = props => <Responsive {...props} maxWidth={991}/>
