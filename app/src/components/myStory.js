@@ -284,8 +284,7 @@ class Education extends Component {
                             </div>
                             <div className='text'>
                                 <i>Web UI and UX Design Using Adobe XD</i><br/>
-                                Complete course on user experience design using Adobe XD from a certified UX
-                                designer.
+                                Complete course on user experience design using Adobe XD by Daniel Walter.
                             </div>
                         </div>
                     </div>
