@@ -5,6 +5,8 @@ import HabitualStacked from './../images/habitual/habitual.png'
 import GradedMain from './../images/graded/graded-Pixel.png'
 import GradedStacked from './../images/graded/graded.png'
 import AzuariShowcase from './../images/azauri/showcase.png'
+import AzauriWireframe from './../images/azauri/wireframes.png'
+import AzauriPrototype from './../images/azauri/prototype.png'
 import cienaLogo from './../images/logos/ciena.svg'
 import ibmLogo from './../images/logos/ibm.svg'
 import kinaxisLogo from './../images/logos/kinaxis.svg'
@@ -241,8 +243,9 @@ export const Azauri = {
   color1: '181919',
   color2: '1f2121',
   color3: '212323',
-  picture1: AzuariShowcase,
-  picture2: GradedStacked,
+  picture1: AzauriWireframe,
+  picture2: AzuariShowcase,
+  picture3: AzauriPrototype,
   pictureClass: 'web',
   client:
     'Graded is a android application designed to help students keep track of their gr' +

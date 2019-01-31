@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import '../styles/designpage.scss'
+import '../styles/designPage.scss'
 import { Link } from 'react-router-dom'
 import IconButton from '@material-ui/core/IconButton'
 
@@ -19,6 +19,7 @@ export default class DesignPage extends Component {
       color3: props.item.color3,
       picture1: props.item.picture1,
       picture2: props.item.picture2,
+      picture3: props.item.picture3,
       pictureClass: props.item.pictureClass,
       client: props.item.client,
       problem: props.item.problem,
@@ -55,95 +56,40 @@ export default class DesignPage extends Component {
           </div>
           <div className="designpage-intro">
             <div className="designpage-intro-info text">
+              <h2>CLIENT</h2>
               {this.state.info1}
-              <br />
-              <br /> {this.state.info2}
             </div>
+            <div className="designpage-intro-info text">
+              <h2>PROBLEM</h2>
+              {this.state.info1}
+            </div>
+          </div>
+          <div className="designpage-body">
             <img
               className={this.state.pictureClass}
               src={this.state.picture1}
+            />
+            <div className="designpage-body-info text">{this.state.info1}</div>
+          </div>
+          <div className="designpage-body">
+            <div className="designpage-body-info text">{this.state.info2}</div>
+            <img
+              className={this.state.pictureClass}
+              src={this.state.picture2}
             />
           </div>
           <div className="designpage-body">
             <img
               className={this.state.pictureClass}
-              src={this.state.picture2}
+              src={this.state.picture3}
             />
             <div className="designpage-body-info text">
-              {this.state.info3}
-              <br />
-              <br /> {this.state.info4}
-            </div>
-          </div>
-          <div className="designpage-footer">
-            <div className="text">See more of the project.</div>
-            <div className="footer-icons">
-              <Footer {...props} />
+              <h3>Client Testimony:</h3>
+              {this.state.info2}
             </div>
           </div>
         </div>
       </div>
     )
-  }
-}
-
-function AndroidLogo(props) {
-  return (
-    <IconButton
-      style={{
-        marginLeft: '5px',
-        marginTop: '5px'
-      }}
-    >
-      <a href={props.link} target="_blank">
-        <i className="fab fa-google-play" style={iconStyle} />
-      </a>
-    </IconButton>
-  )
-}
-function IOSLogo(props) {
-  return (
-    <IconButton
-      style={{
-        marginLeft: '5px',
-        marginTop: '5px'
-      }}
-    >
-      <a href={props.link} target="_blank">
-        <i className="fab fa-app-store" style={iconStyle} />
-      </a>
-    </IconButton>
-  )
-}
-function GitHubLogo(props) {
-  return (
-    <IconButton
-      style={{
-        marginLeft: '5px',
-        marginTop: '5px'
-      }}
-    >
-      <a href={props.link} target="_blank">
-        <i className="fab fa-github" style={iconStyle} />
-      </a>
-    </IconButton>
-  )
-}
-class Footer extends Component {
-  constructor(props) {
-    super(props)
-  }
-  render() {
-    let platforms = this.props.platforms
-    var logos = platforms.map(platform => {
-      if (platform === 'github') {
-        return <GitHubLogo link={this.props.links.github} />
-      } else if (platform === 'android') {
-        return <AndroidLogo link={this.props.links.android} />
-      } else if (platform === 'ios') {
-        return <IOSLogo link={this.props.links.ios} />
-      }
-    })
-    return <div>{logos}</div>
   }
 }
