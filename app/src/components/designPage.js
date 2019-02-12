@@ -24,7 +24,9 @@ export default class DesignPage extends Component {
       client: props.item.client,
       problem: props.item.problem,
       info1: props.item.info1,
-      info2: props.item.info2
+      info2: props.item.info2,
+      review: props.item.review,
+      reviewee: props.item.reviewee
     }
   }
   render() {
@@ -57,11 +59,11 @@ export default class DesignPage extends Component {
           <div className="designpage-intro">
             <div className="designpage-intro-info text">
               <h2>CLIENT</h2>
-              {this.state.info1}
+              {this.state.client}
             </div>
             <div className="designpage-intro-info text">
               <h2>PROBLEM</h2>
-              {this.state.info1}
+              {this.state.problem}
             </div>
           </div>
           <div className="designpage-body">
@@ -85,7 +87,9 @@ export default class DesignPage extends Component {
             />
             <div className="designpage-body-info text">
               <h3>Client Testimony:</h3>
-              {this.state.info2}
+              {this.state.review}
+              <br />
+              <p className="reviewee">{this.state.reviewee}</p>
             </div>
           </div>
         </div>

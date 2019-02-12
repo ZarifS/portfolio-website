@@ -62,6 +62,10 @@
       .designpage-body-info {
         width: 400px;
         min-width: 300px;
+
+        .reviewee {
+          font-style: italic;
+        }
       }
       .mobile {
         height: auto !important;

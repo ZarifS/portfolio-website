@@ -248,30 +248,28 @@ export const Azauri = {
   picture3: AzauriPrototype,
   pictureClass: 'web',
   client:
-    'Graded is a android application designed to help students keep track of their gr' +
-    'ades throughout the semester. It was designed with the user experience in mind a' +
-    'nd because of this the app was kept very simple and user friendly. The applicati' +
-    'on was the final project of my User Experience course and allowed my partner and' +
-    ' I to do user research on fellow students, mock up designs and finally code the ' +
-    'app in Android Studio. ',
+    'Azauri Luxury Developments is a Ottawa based developer focused on creating luxury homes ' +
+    'and lifestyles. Ranging from entire communities to specific properties, the company works to deliver ' +
+    'the highest quality of living and experience to its clients.',
   problem:
-    'As university students the most important aspect of our lives often revolve arou' +
-    'nd making sure our studies and grades are kept up. Often times because of the ma' +
-    'ny different deliverables and items each course offers it becomes difficult to m' +
-    'anage what needs to be done and gauge how one is really doing in each course.',
+    "Although a luxury brand and development company, Azauri's online presence did not adequately reflect" +
+    ' their overall vision. As a result many potential clients and future partners would be confused as to what ' +
+    'the company did when viewing their website. A new website design was needed to demonstrate to clients the companies ' +
+    'vision and portfolio.',
   info1:
-    'With this app the user will be able to track their progress and make sure they s' +
-    'tay up to date with each course and see their current mark at a glance. In order' +
-    ' to make things simple we decided to streamline the process of adding items for ' +
-    'each course and give a course hub where the user can see all their current cours' +
-    'es and their current grade based on the items they have delivered so far.',
+    'The first step to solving this issue was sitting down with the company to figure out their vision. Once I understood' +
+    ' the overall goals and needs for the website I began to design some wireframes to demo what a user might experience on the site.' +
+    ' This process helped me carve out the basic design of the site with valuable feedback from the client.',
   info2:
-    'The application was developed using Android Studio using the Java language for l' +
-    'ogic and functionality and XML for design and interface. Realm mobile database w' +
-    'as used for managing the database and user data.',
-  result:
-    'The application was developed using Android Studio using the Java language for l' +
-    'ogic and functionality and XML for design and interface. Realm mobile database w' +
-    'as used for managing the database and user data.',
-  review: ''
+    'Once the wireframes were developed I was able to apply designs and graphics to create a high-fidility prototype. The prototype included all of the' +
+    ' requested pages alongside the final user experince for a potential future client. This prototype allowed Azauri to see what their final website would look like' +
+    ' and also gave them a blueprint off of which a developer could continue to actually create the full site. This gave the company maximum flexibility on' +
+    ' their desired implementation method.',
+  review:
+    'We hired Zarif to help us redesign our website. What I loved about Zarif was how ' +
+    'honest he was right from the start in telling us how he believed would be the best way he could help us. ' +
+    'Zarif did an amazing job at helping us create a brand new design for our website and providing us with ' +
+    'all of the necessary information needed for us to execute that design. ' +
+    'Thank you Zarif for your professionalism and hard work!',
+  reviewee: 'Carina Guzman, Director of Land Acquisition & Project Development'
 }
