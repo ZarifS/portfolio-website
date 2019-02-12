@@ -1,8 +1,16 @@
 import React, {Component} from 'react'
 import WorkPage from './workPage'
+import DesignPage from './designPage'
 import {Route, Link, Switch} from 'react-router-dom'
 import '../styles/works.scss'
-import {Munchies, Habitual, Graded, Website, BlockChainPaper, CloudComputingPaper} from './constants'
+import {
+    Azauri,
+    Munchies,
+    Habitual,
+    Graded,
+    BlockChainPaper,
+    CloudComputingPaper
+} from './constants'
 
 export default class WorksRouteHandler extends Component {
     constructor(props) {
@@ -21,7 +29,7 @@ export default class WorksRouteHandler extends Component {
                     exact
                     path={`/works/munchies`}
                     render={() => <WorkPage item={Munchies}/>}/>
-                <Route exact path={`/works/website`} render={() => <WorkPage item={Website}/>}/>
+                <Route exact path={`/works/azauri`} render={() => <DesignPage item={Azauri}/>}/>
                 <Route path={`/works`} component={Works}/>
             </Switch>
         )
@@ -42,6 +50,17 @@ class Works extends Component {
                     </div>
                 </div>
                 <div className='works-content'>
+                    <div className='projects'>
+                        <div className='text-header'>
+                            Client Work
+                            <hr/>
+                        </div>
+                        <div className='project-container'>
+                            <Link to={`${this.props.match.url}` + '/azauri'}>
+                                <ProjectCard item={Azauri}/>
+                            </Link>
+                        </div>
+                    </div>
                     <div className='projects'>
                         <div className='text-header'>
                             Software Projects

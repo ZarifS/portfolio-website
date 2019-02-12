@@ -1,6 +1,6 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import '../styles/workPage.scss'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import IconButton from '@material-ui/core/IconButton';
 
 const iconStyle = {
@@ -40,9 +40,9 @@ export default class WorkPage extends Component {
                     <Link to='/works'>
                         <IconButton
                             style={{
-                            'marginLeft': '5px',
-                            'marginTop': '5px'
-                        }}>
+                                'marginLeft': '5px',
+                                'marginTop': '5px'
+                            }}>
                             <i className="far fa-times-circle" style={iconStyle}></i>
                         </IconButton>
                     </Link>
@@ -51,30 +51,30 @@ export default class WorkPage extends Component {
                     <div className='center-wrapper'>
                         <div className='workpage-header'>
                             <div className='work-logo title-header'>{this.state.title}</div>
-                            <hr/>
+                            <hr />
                         </div>
                     </div>
                     <div className='workpage-intro'>
                         <div className='workpage-intro-info text'>
                             {this.state.info1}
-                            <br/>
-                            <br/> {this.state.info2}
+                            <br />
+                            <br /> {this.state.info2}
                         </div>
-                        <img className={this.state.pictureClass} src={this.state.picture1}/>
+                        <img className={this.state.pictureClass} src={this.state.picture1} />
                     </div>
                     <div className='workpage-body'>
-                        <img className={this.state.pictureClass} src={this.state.picture2}/>
+                        <img className={this.state.pictureClass} src={this.state.picture2} />
                         <div className='workpage-body-info text'>
                             {this.state.info3}
-                            <br/>
-                            <br/>
+                            <br />
+                            <br />
                             {this.state.info4}
                         </div>
                     </div>
                     <div className='workpage-footer'>
                         <div className='text'>See more of the project.</div>
                         <div className='footer-icons'>
-                            <Footer {...props}/>
+                            <Footer {...props} />
                         </div>
                     </div>
                 </div>
@@ -87,9 +87,9 @@ function AndroidLogo(props) {
     return (
         <IconButton
             style={{
-            'marginLeft': '5px',
-            'marginTop': '5px'
-        }}>
+                'marginLeft': '5px',
+                'marginTop': '5px'
+            }}>
             <a href={props.link} target="_blank">
                 <i className='fab fa-google-play' style={iconStyle}></i>
             </a>
@@ -100,9 +100,9 @@ function IOSLogo(props) {
     return (
         <IconButton
             style={{
-            'marginLeft': '5px',
-            'marginTop': '5px'
-        }}>
+                'marginLeft': '5px',
+                'marginTop': '5px'
+            }}>
             <a href={props.link} target="_blank">
                 <i className='fab fa-app-store' style={iconStyle}></i>
             </a>
@@ -113,9 +113,9 @@ function GitHubLogo(props) {
     return (
         <IconButton
             style={{
-            'marginLeft': '5px',
-            'marginTop': '5px'
-        }}>
+                'marginLeft': '5px',
+                'marginTop': '5px'
+            }}>
             <a href={props.link} target="_blank">
                 <i className='fab fa-github' style={iconStyle}></i>
             </a>
@@ -130,11 +130,11 @@ class Footer extends Component {
         let platforms = this.props.platforms
         var logos = platforms.map((platform) => {
             if (platform === 'github') {
-                return <GitHubLogo link={this.props.links.github}/>
+                return <GitHubLogo link={this.props.links.github} />
             } else if (platform === 'android') {
-                return <AndroidLogo link={this.props.links.android}/>
+                return <AndroidLogo link={this.props.links.android} />
             } else if (platform === 'ios') {
-                return <IOSLogo link={this.props.links.ios}/>
+                return <IOSLogo link={this.props.links.ios} />
             }
         })
         return (
