@@ -52,6 +52,11 @@
         width: 400px;
         min-width: 300px;
         margin-right: 20px;
+        padding-bottom: 10px;
+      }
+      @media screen and (max-width: 1200px) {
+        flex-wrap: wrap;
+        justify-content: center;
       }
     }
     .designpage-body {
